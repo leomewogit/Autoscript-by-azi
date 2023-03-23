@@ -116,11 +116,11 @@ chmod +x /root/.acme.sh/acme.sh
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 echo -e "${OKEY} Your Domain : $domain"
 sleep 2
-wget -q -O janggut.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/janggut.sh && chmod +x janggut.sh && ./janggut.sh
+wget -q -O janggut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/janggut.sh && chmod +x janggut.sh && ./janggut.sh
 sleep 1
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
-wget -q -O senmenu.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
+wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1
 clear
 cat > /etc/cron.d/xp_otm <<-END
@@ -173,7 +173,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[   THEMOON ]-===================="
+echo "=====================-[   Cuaksszz ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""

@@ -208,7 +208,7 @@ case $opt in
 19) clear ; clearlog ;;
 20) clear ; cat fix ;;
 21) clear ; updatsc ;;
-22) clear ; python3 main.py
+22) clear ; python3 main.py ;;
 
 0) clear ; menu ;;
 x) exit ;;

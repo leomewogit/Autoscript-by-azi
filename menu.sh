@@ -174,9 +174,10 @@ echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}TENDANG        
 echo -e " ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED $NC"
 echo -e " ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}WEBMIN $NC"
 echo -e " ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO $NC"
-echo -e " ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
+echo -e " ${BICyan}[${BIWhite}09${BICyan}]${RED} •${NC}${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
 echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
-echo -e " ${BICyan}[ ${BIWhite}X${BICyan}]${RED} •${NC} ${CYAN}Ketik x to exit $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"  
+echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Run bot chatGPT $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"  
+echo -e " ${BICyan}[ ${BIWhite}X${BICyan}]${RED} •${NC} ${CYAN}Ketik x to exit $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 rm -f /root/status

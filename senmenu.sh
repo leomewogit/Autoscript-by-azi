@@ -1,7 +1,7 @@
 #!/bin/bash
 # // config Data
 echo -e "${GREEN}Config Data${NC}"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu.sh"
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-ws.sh"
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-ssws.sh"
 #wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-socks.sh"

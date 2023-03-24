@@ -1,6 +1,7 @@
 #!/bin/bash
 echo -e ngetes update bang
-rm -f /root/versi
-wget -q -O /root/versi "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/update/versiupdate"
+rm -f /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu.sh"
 echo -e "\e[32mUpdate Selesai...\e[0m"
-cd
+chmod 777 /usr/bin/menu
+menu

@@ -115,6 +115,8 @@ else
     echo $sisa_hari > /etc/${Auther}/license-remaining-active-days.db
 fi
 clear
+sspwd=$(cat /etc/xray/passwd)
+clear
 source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -122,11 +124,11 @@ else
 domain=$IP
 fi
 
-tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
+
+tls="$(cat ~/log-install.txt | grep -w "Sodosok WS/GRPC" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\\E[0;41;36m      Add Xray/Vmess Account      \E[0m"
+echo -e "\\E[0;41;36m      Add Socks Ws/Grpc Account    \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 		read -rp "User: " -e user
@@ -135,182 +137,277 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
             echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-            echo -e "\\E[0;41;36m      Add Xray/Vmess Account      \E[0m"
+            echo -e "\\E[0;41;36m      Add Socks  Ws/Grpc Account      \E[0m"
             echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
 			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			read -n 1 -s -r -p "Press any key to back on menu"
-menu
+xray-menu
 		fi
 	done
 
-uuid=$(cat /proc/sys/kernel/random/uuid)
+read -rp "Password: " -e pwd
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmess$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vmessworry$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vmesskuota$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-asu=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "bug.com",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/vmess",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "tls"
+sed -i '/#socksws$/a\### '"$user $exp"'\
+},{"user": "'""$user""'","pass": "'""$pwd""'"' /etc/xray/config.json
+sed -i '/#socksgrpc$/a\### '"$user $exp"'\
+},{"user": "'""$user""'","pass": "'""$pwd""'"' /etc/xray/config.json
+systemctl restart xray
+cat > /home/vps/public_html/socksws-$user.txt <<-END
+{
+		"dns": {
+				"hosts": {
+						"domain:googleapis.cn": "googleapis.com"
+				},
+				"servers": [
+						"1.1.1.1"
+				]
+		},
+		"inbounds": [
+				{
+						"listen": "127.0.0.1",
+						"port": "10808",
+						"protocol": "socks",
+						"settings": {
+								"auth": "noauth",
+								"udp": true,
+								"userLevel": 8
+						},
+						"sniffing": {
+								"destOverride": [
+										"http",
+										"tls"
+								],
+								"enabled": true
+						},
+						"tag": "socks"
+				},
+				{
+						"listen": "127.0.0.1",
+						"port": "10809",
+						"protocol": "http",
+						"settings": {
+								"userLevel": 8
+						},
+						"tag": "http"
+				}
+		],
+		"log": {
+				"loglevel": "warning"
+		},
+		"outbounds": [
+				{
+						"mux": {
+								"concurrency": 8,
+								"enabled": true
+						},
+						"protocol": "socks",
+						"settings": {
+								"servers": [
+										{
+												"address": "$domain",
+												"port": 443,
+												"users": [
+														{
+																"level": 0,
+																"user": "$user",
+																"pass": "$pwd"
+														}
+												]
+										}
+								]
+						},
+						"streamSettings": {
+								"network": "ws",
+								"security": "tls",
+								"tlsSettings": {
+										"allowInsecure": true,
+										"serverName": "bug.com"
+								},
+								"wsSettings": {
+										"headers": {
+												"Host": "$domian"
+										},
+										"path": "/socks-ws"
+								}
+						},
+						"tag": "proxy"
+				},
+				{
+						"protocol": "freedom",
+						"settings": {},
+						"tag": "direct"
+				},
+				{
+						"protocol": "blackhole",
+						"settings": {
+								"response": {
+										"type": "http"
+								}
+						},
+						"tag": "block"
+				}
+		],
+		"policy": {
+				"levels": {
+						"8": {
+								"connIdle": 300,
+								"downlinkOnly": 1,
+								"handshake": 4,
+								"uplinkOnly": 1
+						}
+				},
+				"system": {
+						"statsOutboundDownlink": true,
+						"statsOutboundUplink": true
+				}
+		},
+		"routing": {
+				"domainStrategy": "Asls",
+				"rules": []
+		},
+		"stats": {}
 }
-EOF`
-ask=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "bug.com",
-      "port": "80",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/vmess",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "none"
+END
+cat > /home/vps/public_html/socksgrpc-$user.txt <<-END
+{
+		"dns": {
+				"hosts": {
+						"domain:googleapis.cn": "googleapis.com"
+				},
+				"servers": [
+						"1.1.1.1"
+				]
+		},
+		"inbounds": [
+				{
+						"listen": "127.0.0.1",
+						"port": "10808",
+						"protocol": "socks",
+						"settings": {
+								"auth": "noauth",
+								"udp": true,
+								"userLevel": 8
+						},
+						"sniffing": {
+								"destOverride": [
+										"http",
+										"tls"
+								],
+								"enabled": true
+						},
+						"tag": "socks"
+				},
+				{
+						"listen": "127.0.0.1",
+						"port": "10809",
+						"protocol": "http",
+						"settings": {
+								"userLevel": 8
+						},
+						"tag": "http"
+				}
+		],
+		"log": {
+				"loglevel": "warning"
+		},
+		"outbounds": [
+				{
+						"mux": {
+								"concurrency": 8,
+								"enabled": true
+						},
+						"protocol": "socks",
+						"settings": {
+								"servers": [
+										{
+												"address": "$domain",
+												"port": 443,
+												"users": [
+														{
+																"level": 0,
+																"user": "$user",
+																"pass": "$pwd"
+														}
+												]
+										}
+								]
+						},
+						"streamSettings": {
+						"grpcSettings": {
+                         "multiMode": true,
+                             "serviceName": "socks-grpc"
+                               },
+								"network": "grpc",
+								"security": "tls",
+								"tlsSettings": {
+										"allowInsecure": true,
+										"serverName": "bug.com"
+								}
+						},
+						"tag": "proxy"
+				},
+				{
+						"protocol": "freedom",
+						"settings": {},
+						"tag": "direct"
+				},
+				{
+						"protocol": "blackhole",
+						"settings": {
+								"response": {
+										"type": "http"
+								}
+						},
+						"tag": "block"
+				}
+		],
+		"policy": {
+				"levels": {
+						"8": {
+								"connIdle": 300,
+								"downlinkOnly": 1,
+								"handshake": 4,
+								"uplinkOnly": 1
+						}
+				},
+				"system": {
+						"statsOutboundDownlink": true,
+						"statsOutboundUplink": true
+				}
+		},
+		"routing": {
+				"domainStrategy": "Asls",
+				"rules": []
+		},
+		"stats": {}
 }
-EOF`
-asi=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "80",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/worryfree",
-      "type": "none",
-      "host": "bug.com",
-      "tls": "none"
-}
-EOF`
-aso=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "80",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/chat",
-      "type": "none",
-      "host": "bug.com",
-      "tls": "none"
-}
-EOF`
-grpc=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "grpc",
-      "path": "vmess-grpc",
-      "type": "none",
-      "host": "bug.com",
-      "tls": "tls"
-}
-EOF`
-ama=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/worryfree",
-      "type": "none",
-      "host": "bug.com",
-      "tls": "tls"
-}
-EOF`
-ami=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/chat",
-      "type": "none",
-      "host": "bug.com",
-      "tls": "tls"
-}
-EOF`
-vmess_base641=$( base64 -w 0 <<< $vmess_json1)
-vmess_base642=$( base64 -w 0 <<< $vmess_json2)
-vmess_base643=$( base64 -w 0 <<< $vmess_json3)
-vmess_base644=$( base64 -w 0 <<< $vmess_json4)
-vmess_base645=$( base64 -w 0 <<< $vmess_json5)
-vmess_base646=$( base64 -w 0 <<< $vmess_json6)
-vmess_base647=$( base64 -w 0 <<< $vmess_json7)
-vmesslink1="vmess://$(echo $asu | base64 -w 0)"
-vmesslink2="vmess://$(echo $ask | base64 -w 0)"
-vmesslink3="vmess://$(echo $asi | base64 -w 0)"
-vmesslink4="vmess://$(echo $aso | base64 -w 0)"
-vmesslink5="vmess://$(echo $grpc | base64 -w 0)"
-vmesslink6="vmess://$(echo $ama | base64 -w 0)"
-vmesslink7="vmess://$(echo $ami | base64 -w 0)"
+END
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "\\E[0;41;36m        Xray/Vmess Account        \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\\E[0;41;36m        Socks WS/GRPC Account      \E[0m" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Remarks   : ${user}" | tee -a /etc/log-create-user.log
-echo -e "Domain    : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "Port TLS  : ${tls}" | tee -a /etc/log-create-user.log
-echo -e "Port NTLS : ${none}" | tee -a /etc/log-create-user.log
-echo -e "Port GRPC : ${tls}" | tee -a /etc/log-create-user.log
-echo -e "id        : ${uuid}" | tee -a /etc/log-create-user.log
-echo -e "alterId   : 0" | tee -a /etc/log-create-user.log
-echo -e "Security  : auto" | tee -a /etc/log-create-user.log
-echo -e "Network   : ws/grpc" | tee -a /etc/log-create-user.log
-echo -e "Path      : /vmess" | tee -a /etc/log-create-user.log
-echo -e "Path      : /worryfree" | tee -a /etc/log-create-user.log
-#echo -e "Path     : /kuota-habis" | tee -a /etc/log-create-user.log
-echo -e "SerName   : vmess-grpc" | tee -a /etc/log-create-user.log
+echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
+echo -e "Password : ${pwd}" | tee -a /etc/log-create-user.log
+echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
+echo -e "Port WS : ${tls}/80" | tee -a /etc/log-create-user.log
+echo -e "Port  GRPC : ${tls}" | tee -a /etc/log-create-user.log
+echo -e "Network : ws/grpc" | tee -a /etc/log-create-user.log
+echo -e "Path : /socks-ws" | tee -a /etc/log-create-user.log
+echo -e "ServiceName : socks-grpc" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Link TLS : ${vmesslink1}" | tee -a /etc/log-create-user.log
+echo -e "Link  WS : http://${domain}:81/socksws-$user.txt" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Link none TLS : ${vmesslink2}" | tee -a /etc/log-create-user.log
-echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Link (WORRYFREE) : ${vmesslink3}" | tee -a /etc/log-create-user.log
-echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Link none (FLEX) : ${vmesslink4}" | tee -a /etc/log-create-user.log
-echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "Link GRPC : ${vmesslink5}" | tee -a /etc/log-create-user.log
+echo -e "Link  GRPC : http://${domain}:81/socksgrpc-$user.txt" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
-rm /etc/xray/$user-tls.json > /dev/null 2>&1
-rm /etc/xray/$user-none.json > /dev/null 2>&1
 read -n 1 -s -r -p "Press any key to back on menu"
 
 menu

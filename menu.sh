@@ -10,7 +10,7 @@ UWhite='\033[4;37m'       # White
 On_IPurple='\033[0;105m'  #
 On_IRed='\033[0;101m'
 IBlack='\033[0;90m'       # Black
-IRed='\033[0;91m'         # Red
+='\033[0;91m'         # Red
 IGreen='\033[0;92m'       # Green
 IYellow='\033[0;93m'      # Yellow
 IBlue='\033[0;94m'        # Blue
@@ -140,7 +140,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-wget -q -O /root/status "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/statushariini"
+wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
 LocalVersion=$(cat /root/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
@@ -148,7 +148,7 @@ ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[39;1;92m                   ⇱ SERVER INFORMATION ⇲                      \E[0m"
+echo -e "\E[39;1;92m                   ⇱ SCRIPT PREMIUM CYBERVPN ⇲                      \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${BICyan} "                                                                      
 echo -e "${BICyan} ⇲  ${BICyan}Script Name     :  ${BIYellow}XrayCol V $LocalVersion${NC}"    
@@ -166,17 +166,18 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[39;1;92m                     ⇱ MENU SERVICE ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}11${BICyan}]${RED} • ${NC}${CYAN}BANNER CHANGE $NC"
-echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}CEK RUNNING SERVICE $NC"
-echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}CEK TRAFFIC $NC"
-echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST  $NC"
-echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}TENDANG         $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH USE $NC"
-echo -e " ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED $NC"
-echo -e " ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}WEBMIN $NC"
-echo -e " ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO $NC"
-echo -e " ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
-echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
-echo -e " ${BICyan}[ ${BIWhite}X${BICyan}]${RED} •${NC} ${CYAN}Ketik x to exit $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"  
+echo -e " ${BICyan}[${BIWhite}1${BICyan}]${RED}  •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}BANNER CHANGE $NC"
+echo -e " ${BICyan}[${BIWhite}2${BICyan}]${RED}  •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}CEK RUNNING SERVICE $NC"
+echo -e " ${BICyan}[${BIWhite}3${BICyan}]${RED}  •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK TRAFFIC $NC"
+echo -e " ${BICyan}[${BIWhite}4${BICyan}]${RED}  •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST  $NC"
+echo -e " ${BICyan}[${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}TENDANG         $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH USE $NC"
+echo -e " ${BICyan}[${BIWhite}6${BICyan}]${RED}  •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED $NC"
+echo -e " ${BICyan}[${BIWhite}7${BICyan}]${RED}  •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}WEBMIN $NC"
+echo -e " ${BICyan}[${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO $NC"
+echo -e " ${BICyan}[${BIWhite}9${BICyan}]${RED}  •${NC} ${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
+echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
+echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}SSH WS & OVPN   $NC  ${BICyan}[${BIWhite}22${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"  
+echo -e " ${BICyan}[${BIWhite}x${BICyan}]${RED} •${NC} ${CYAN} Ketik x untuk exit   $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 rm -f /root/status
@@ -191,22 +192,23 @@ case $opt in
 4) clear ; menu-ss ;;
 5) clear ; tendang ;;
 6) clear ; autoreboot ;;
-7) clear ; autoreboot ;;
+7) clear ; reboot ;;
 8) clear ; restart ;;
 9) clear ; genssl ;;
 10) clear ; addhost ;;
-11) clear ; nano /etc/issue.net ;;
-12) clear ; running ;;
-13) clear ; cek-trafik ;;
-14) clear ; cek-speed ;;
-15) clear ; cek-bandwidth ;;
-16) clear ; limit-speed ;;
-17) clear ; wbm ;;
+11) clear ; menu-ssh ;;
+12) clear ; nano /etc/issue.net ;;
+13) clear ; running ;;
+14) clear ; cek-trafik ;;
+15) clear ; cek-speed ;;
+16) clear ; cek-bandwidth ;;
+17) clear ; limit-speed ;;
+18) clear ; wbm ;;
 #18) clear ; cek-ram ;;
-18) clear ; cat /root/log-install.txt ;;
-19) clear ; clearlog ;;
-20) clear ; cat fix ;;
-21) clear ; updatsc ;;
+19) clear ; cat /root/log-install.txt ;;
+20) clear ; clearlog ;;
+21) clear ; cat fix ;;
+22) clear ; updatsc ;;
 
 0) clear ; menu ;;
 x) exit ;;

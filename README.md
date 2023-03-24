@@ -1,6 +1,6 @@
 # Autoscript Xray
 
-## For Ubuntu 18.04 Only For First Time Installation (Update Repo) <br>
+## For Ubuntu 20.04 Only For First Time Installation (Update Repo) <br>
   
   ```html
  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot

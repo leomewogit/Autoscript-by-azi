@@ -166,17 +166,17 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[39;1;92m                     ⇱ MENU SERVICE ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " ${BICyan}[${BIWhite}1${BICyan}]${RED}  •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}BANNER CHANGE $NC"
-echo -e " ${BICyan}[${BIWhite}2${BICyan}]${RED}  •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}CEK RUNNING SERVICE $NC"
-echo -e " ${BICyan}[${BIWhite}3${BICyan}]${RED}  •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK TRAFFIC $NC"
-echo -e " ${BICyan}[${BIWhite}4${BICyan}]${RED}  •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST  $NC"
-echo -e " ${BICyan}[${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}TENDANG         $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH USE $NC"
-echo -e " ${BICyan}[${BIWhite}6${BICyan}]${RED}  •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED $NC"
-echo -e " ${BICyan}[${BIWhite}7${BICyan}]${RED}  •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}WEBMIN $NC"
-echo -e " ${BICyan}[${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO $NC"
-echo -e " ${BICyan}[${BIWhite}9${BICyan}]${RED}  •${NC} ${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
-echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
-echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}SSH WS & OVPN   $NC  ${BICyan}[${BIWhite}22${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"  
+echo -e " ${BICyan}[${BIWhite}1${BICyan}]${RED}  •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}TRAFFIC $NC"
+echo -e " ${BICyan}[${BIWhite}2${BICyan}]${RED}  •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST $NC"
+echo -e " ${BICyan}[${BIWhite}3${BICyan}]${RED}  •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH $NC"
+echo -e " ${BICyan}[${BIWhite}4${BICyan}]${RED}  •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED  $NC"
+echo -e " ${BICyan}[${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}TENDANG         $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}WEBMIN USE $NC"
+echo -e " ${BICyan}[${BIWhite}6${BICyan}]${RED}  •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO  $NC"
+echo -e " ${BICyan}[${BIWhite}7${BICyan}]${RED}  •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
+echo -e " ${BICyan}[${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
+echo -e " ${BICyan}[${BIWhite}9${BICyan}]${RED}  •${NC} ${CYAN}GEN-SSL / CERTV $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"
+echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}Start bot $NC"
+echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Running         $NC"  
 echo -e " ${BICyan}[${BIWhite}x${BICyan}]${RED} •${NC} ${CYAN} Ketik x untuk exit   $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -192,24 +192,22 @@ case $opt in
 4) clear ; menu-ss ;;
 5) clear ; tendang ;;
 6) clear ; autoreboot ;;
-7) clear ; reboot ;;
+7) clear ; autoreboot ;;
 8) clear ; restart ;;
 9) clear ; genssl ;;
 10) clear ; addhost ;;
-11) clear ; menu-ssh ;;
-12) clear ; nano /etc/issue.net ;;
-13) clear ; running ;;
-14) clear ; cek-trafik ;;
-15) clear ; cek-speed ;;
-16) clear ; cek-bandwidth ;;
-17) clear ; limit-speed ;;
-18) clear ; wbm ;;
+11) clear ; running ;;
+12) clear ; cek-trafik ;;
+13) clear ; cek-speed ;;
+14) clear ; cek-bandwidth ;;
+15) clear ; limit-speed ;;
+16) clear ; wbm ;;
 #18) clear ; cek-ram ;;
-19) clear ; cat /root/log-install.txt ;;
-20) clear ; clearlog ;;
-21) clear ; cat fix ;;
-22) clear ; updatsc ;;
-
+17) clear ; cat /root/log-install.txt ;;
+18) clear ; clearlog ;;
+19) clear ; cat fix ;;
+20) clear ; updatsc ;;
+21) clear ; python3 main.py ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;

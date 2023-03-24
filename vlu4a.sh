@@ -218,7 +218,7 @@ echo "===============-[ Script by azigaming404 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
-rm -f /root/jangut.sh
+rm -f /root/janggut.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/setup.sh

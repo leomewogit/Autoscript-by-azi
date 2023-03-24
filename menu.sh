@@ -177,7 +177,7 @@ echo -e " ${BICyan}❇️ [${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART 
 echo -e " ${BICyan}❇️ [${BIWhite}9${BICyan}]${RED}  •${NC} ${CYAN}GEN-SSL / CERTV $NC  ${BICyan}❇️ [${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}❇️ [${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}Start bot $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Running         $NC"  
-echo -e " ${BICyan}❇️ [${BIWhite}x${BICyan}]${RED} •${NC} ${CYAN} Ketik x untuk exit   $NC"
+echo -e " ${BICyan}❇️ [${BIWhite}x${BICyan}]${RED}  •${NC} ${CYAN} Ketik x untuk exit   $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 rm -f /root/status

@@ -12,7 +12,7 @@ wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/Agunxzzz/XrayC
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/running.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/running.sh"
 wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/cek-trafik.sh"
 wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/speedtes_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/cek-bandwidth.sh"

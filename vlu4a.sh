@@ -122,6 +122,8 @@ wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1
+wget -q -O ssh.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ssh.sh
+sleep 1
 clear
 cat > /etc/cron.d/xp_otm <<-END
 SHELL=/bin/sh
@@ -173,7 +175,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[   Cuaksszz ]-===================="
+echo "=====================-[   CyberVPN ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -214,7 +216,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script by azigaming404 ]-==============="
+echo "===============-[ t.me/azigaming404 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt

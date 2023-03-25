@@ -175,7 +175,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[   CyberVPN ]-===================="
+echo "=====================-[ CyberVPN ]-========================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""

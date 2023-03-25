@@ -33,7 +33,7 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscr
 wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/webmin.sh"
 wget -q -O /usr/bin/changer "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/changer.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/xp.sh"
-wget -q -O /usr/bin/addhost  "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/addhost.sh"
+wget -q -O /usr/bin/addhost  "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/addhost.sh"
 wget -q -O /usr/bin/genssl  "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/genssl.sh"
 wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/cf.sh"
 #wget -q -O /usr/bin/update "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/update.sh"

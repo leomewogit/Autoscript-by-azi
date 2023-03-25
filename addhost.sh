@@ -3,6 +3,7 @@ clear
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "memeriksa vps anda"
+sleep 1
 CEKEXPIRED () {
         today=$(date -d +1day +%Y -%m -%d)
         Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')

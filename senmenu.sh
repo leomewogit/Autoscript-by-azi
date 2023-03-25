@@ -24,7 +24,7 @@ wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Agunxzzz/XrayC
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-ss.sh"
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-trojan.sh"
 #wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-trgo.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-ssh.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-ssh.sh"
 #wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-bckp-telegram.sh"
 wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-bckp-github.sh"
 #wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/bckpbot.sh"

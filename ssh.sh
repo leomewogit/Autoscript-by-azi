@@ -363,6 +363,6 @@ wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./o
 
 #remove file 
 cd
-rm -rf hideinstall-websocket.sh
+rm -rf websocket.sh
 rm -rf hidehost.sh
 rm -rf ohp.sh

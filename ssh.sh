@@ -5,6 +5,8 @@
 # port Stunnel and Websocket 443 & Slowdns
 # ==================================================
 
+echo "installing ssh ws"
+
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ifconfig.me/ip);

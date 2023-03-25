@@ -21,7 +21,7 @@ clear
 echo -e "${GREEN}====================="
 echo -e "${CYAN} SCRPIT PREMIUM"
 echo -e "${GREEN}====================="
-echo 
+echo -e "${CYAN}"
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (Days): " masaaktif

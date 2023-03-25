@@ -5,8 +5,6 @@
 # port Stunnel and Websocket 443 & Slowdns
 # ==================================================
 
-echo "installing ssh ws"
-
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ifconfig.me/ip);
@@ -266,7 +264,6 @@ wget -O member "https://gitlab.com/hidessh/baru/-/raw/main/member.sh"
 wget -O delete "https://gitlab.com/hidessh/baru/-/raw/main/delete.sh"
 wget -O cek "https://gitlab.com/hidessh/baru/-/raw/main/cek.sh"
 wget -O restart "https://gitlab.com/hidessh/baru/-/raw/main/restart.sh"
-wget -O info "https://gitlab.com/hidessh/baru/-/raw/main/info.sh"
 wget -O ram "https://gitlab.com/hidessh/baru/-/raw/main/ram.sh"
 wget -O renew "https://gitlab.com/hidessh/baru/-/raw/main/renew.sh"
 wget -O autokill "https://gitlab.com/hidessh/baru/-/raw/main/autokill.sh"
@@ -285,9 +282,6 @@ wget -O autoservice "https://gitlab.com/hidessh/baru/-/raw/main/autoservice.sh"
 chmod +x autoservice
 chmod +x userdelexpired
 chmod +x user-limit
-chmod +x add-host
-chmod +x menu
-chmod +x usernew
 chmod +x trial
 chmod +x hapus
 chmod +x member
@@ -344,7 +338,7 @@ apt autoremove -y
 
 
 #instalasi Websocket
-wget https://raw.githubusercontent.com/Azigaming404/websocket/main/websocket.sh && chmod +x websocket.sh && websocket.sh
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/hideinstall-websocket.sh && chmod +x hideinstall-websocket.sh && ./hideinstall-websocket.sh
 
 # finihsing
 clear
@@ -353,6 +347,6 @@ wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./o
 
 #remove file 
 cd
-rm -rf websocket.sh
+rm -rf hideinstall-websocket.sh
 rm -rf hidehost.sh
 rm -rf ohp.sh

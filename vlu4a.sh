@@ -122,7 +122,7 @@ wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1
-wget -q -O ssh.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ssh.sh
+wget -q -O ssh.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ssh.sh && chmod +x ssh.sh && ./ssh.sh
 sleep 1
 clear
 cat > /etc/cron.d/xp_otm <<-END

@@ -170,12 +170,12 @@ echo -e " ${BICyan}❇️ [${BIWhite}1${BICyan}]${RED}  •${NC} ${CYAN}VMESS ME
 echo -e " ${BICyan}❇️ [${BIWhite}2${BICyan}]${RED}  •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}❇️ [${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}3${BICyan}]${RED}  •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}❇️ [${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}4${BICyan}]${RED}  •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}❇️ [${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED  $NC"
-echo -e " ${BICyan}❇️ [${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}TENDANG         $NC  ${BICyan}❇️ [${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}WEBMIN USE $NC"
+echo -e " ${BICyan}❇️ [${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}SSH & OVPN      $NC  ${BICyan}❇️ [${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}WEBMIN USE $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}6${BICyan}]${RED}  •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}❇️ [${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO  $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}7${BICyan}]${RED}  •${NC} ${CYAN}REBOOT          $NC  ${BICyan}❇️ [${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}❇️ [${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}9${BICyan}]${RED}  •${NC} ${CYAN}GEN-SSL / CERTV $NC  ${BICyan}❇️ [${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}UPDATE SCRIPT $NC"
-echo -e " ${BICyan}❇️ [${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}❇️ [${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}Start bot $NC"
+echo -e " ${BICyan}❇️ [${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}❇️ [${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}TENDANG $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}Running         $NC"  
 echo -e " ${BICyan}❇️ [${BIWhite}x${BICyan}]${RED}  •${NC} ${CYAN} Ketik x untuk exit   $NC"
 echo -e " ${RED}"
@@ -190,7 +190,7 @@ case $opt in
 2) clear ; menu-vless ;;
 3) clear ; menu-trojan ;;
 4) clear ; menu-ss ;;
-5) clear ; tendang ;;
+5) clear ; menu-ssh ;;
 6) clear ; autoreboot ;;
 7) clear ; reboot ;;
 8) clear ; restart ;;
@@ -207,7 +207,7 @@ case $opt in
 18) clear ; clearlog ;;
 19) clear ; cat fix ;;
 20) clear ; updatsc ;;
-21) clear ; python3 main.py ;;
+21) clear ; tendang ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;

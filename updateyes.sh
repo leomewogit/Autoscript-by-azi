@@ -1,5 +1,6 @@
 #!/bin/bash
 echo -e cheking update
+sleep 2
 rm -f /usr/bin/menu
 rm -rf /root/versi
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu.sh"

@@ -170,7 +170,7 @@ echo -e " ${BICyan}❇️ [${BIWhite}1${BICyan}]${RED}  •${NC} ${CYAN}VMESS ME
 echo -e " ${BICyan}❇️ [${BIWhite}2${BICyan}]${RED}  •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}❇️ [${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEST $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}3${BICyan}]${RED}  •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}❇️ [${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}4${BICyan}]${RED}  •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}❇️ [${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}LIMIT SPEED  $NC"
-echo -e " ${BICyan}❇️ [${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}SSH & OVPN      $NC  ${BICyan}❇️ [${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}WEBMIN USE $NC"
+echo -e " ${BICyan}❇️ [${BIWhite}5${BICyan}]${RED}  •${NC} ${CYAN}Bot Chat GPT    $NC  ${BICyan}❇️ [${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}WEBMIN USE $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}6${BICyan}]${RED}  •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}❇️ [${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO  $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}7${BICyan}]${RED}  •${NC} ${CYAN}REBOOT          $NC  ${BICyan}❇️ [${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
 echo -e " ${BICyan}❇️ [${BIWhite}8${BICyan}]${RED}  •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}❇️ [${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
@@ -190,7 +190,7 @@ case $opt in
 2) clear ; menu-vless ;;
 3) clear ; menu-trojan ;;
 4) clear ; menu-ss ;;
-5) clear ; menu-ssh ;;
+5) clear ; python3 main.py ;;
 6) clear ; autoreboot ;;
 7) clear ; reboot ;;
 8) clear ; restart ;;

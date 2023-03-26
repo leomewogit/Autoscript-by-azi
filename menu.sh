@@ -19,6 +19,29 @@ ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
 
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "memeriksa vps anda"
+sleep 1
+CEKEXPIRED () {
+        today=$(date -d +1day +%Y -%m -%d)
+        Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
+        if [[ $today < $Exp1 ]]; then
+        echo "status script aktif.."
+        else
+        echo "SCRIPT ANDA EXPIRED";
+        exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo "IZIN DI TERIMA!!"
+CEKEXPIRED
+else
+echo "IZIN DI TOLAK!!";
+exit 0
+fi
+
 # // Export Color & Information
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'

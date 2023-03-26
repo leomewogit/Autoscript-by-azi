@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "checking lokal version"
+sleep 1
 LocalVersion=$(cat /root/versi)
 Version=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/versi | awk '{print $2}')
 if [ $LocalVersion = $Version ]; then

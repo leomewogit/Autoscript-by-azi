@@ -8,5 +8,5 @@ echo -e "\e[32mScript Sudah Versi Terbaru...\e[0m"
 else
 echo -e "\e[32mAda Update Script!!\e[0m";
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/updateyes.sh && chmod +x updateyes.sh && ./updateyes.sh
-rm -f updateyes.sh
+rm -rf updateyes.sh
 fi

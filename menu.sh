@@ -164,7 +164,7 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
 wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
-LocalVersion=$(cat /root/versi)
+LocalVersion=$(cat /usr/bin/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"

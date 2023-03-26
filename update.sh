@@ -1,5 +1,5 @@
 #!/bin/bash
-LocalVersion=$(cat /root/versi)
+LocalVersion=$(cat /usr/bin/versi)
 Version=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/versi | awk '{print $2}')
 if [ $LocalVersion = $Version ]; then
 echo -e "\e[32mScript Sudah Versi Terbaru...\e[0m"

@@ -146,7 +146,8 @@ wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/i
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1
-wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/setup-websocket.sh && bash setup-websocket.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/setup-websocket.sh 
+bash setup-websocket.sh
 clear
 cat > /etc/cron.d/xp_otm <<-END
 SHELL=/bin/sh

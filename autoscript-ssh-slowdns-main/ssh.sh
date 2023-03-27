@@ -262,7 +262,7 @@ netfilter-persistent reload
 cd
 # Custom Banner SSH
 echo "================  Banner ======================"
-wget -O /etc/issue.net "https://gitlab.com/hidessh/baru/-/raw/main/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
 chmod +x /etc/issue.net
 
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
@@ -358,7 +358,7 @@ apt autoremove -y
 
 
 #instalasi Websocket
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/hideinstall-websocket.sh && chmod +x hideinstall-websocket.sh && ./hideinstall-websocket.sh
+wget https://raw.githubusercontent.com/Azigaming404/websocket/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 
 # finihsing
 clear

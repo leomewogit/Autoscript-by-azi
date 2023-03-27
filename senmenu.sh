@@ -40,6 +40,8 @@ wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main
 wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
 wget -q -O /root/versi "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/versibasic"
 wget -q -O /usr/bin/updatsc "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/update.sh"
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/set-br.sh
+bash set-br.sh
 
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/add-ws
@@ -77,3 +79,4 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/changer
 chmod +x /usr/bin/fix
 #chmod +x /usr/bin/update
+rm -rf set-br.sh

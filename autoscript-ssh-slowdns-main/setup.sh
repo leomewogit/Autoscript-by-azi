@@ -36,7 +36,7 @@ cd
 echo "installing insaller Slowdns "
 echo "Progress..."
 echo "Sedang berlangsung..."
-wget https://raw.githubusercontent.com/hidessh99/autoscript-ssh-slowdns/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 sleep 1
 
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"

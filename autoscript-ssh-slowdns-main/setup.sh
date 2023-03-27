@@ -23,7 +23,7 @@ echo "installing insaller SSH "
 echo "Progress..."
 echo "Sedang berlangsung..."
 sleep 1
-wget https://raw.githubusercontent.com/hidessh99/autoscript-ssh-slowdns/main/ssh.sh && chmod +x ssh.sh && ./ssh.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh.sh && chmod +x ssh.sh && ./ssh.sh
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
 sleep 1
 echo "Progress..."

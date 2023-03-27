@@ -251,6 +251,7 @@ rm -f /root/domain
 rm -f /root/senmenu.sh
 rm -f /root/xraymode.sh
 rm -f /root/xray.conf
+rm -rf setup-websocket.sh
 history -c
 secs_to_human "$(($(date +%s) - ${start}))"
 echo -e "${YB}[ WARNING ] reboot now ? (Y/N)${NC} "

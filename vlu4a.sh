@@ -237,12 +237,12 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo "
-echo "
+echo ""
+echo ""
 echo "------------------------------------------------------------"
 echo ""
 echo "===================-[ t.me/azigaming404 ]-=================="
-echo -e "
+echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 rm -f /root/janggut.sh

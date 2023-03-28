@@ -163,12 +163,12 @@ shadowsockslink="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux
 shadowsockslink1="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;serviceName=ss-grpc;host=$domain;tls#${user}"
 
 #buat ss WEBSOCKET
-sslinkws="ss://${shadowsocks_base64e}@${domain}:443?path=/ss-ws&security=tls&encryption=none&type=ws#${user}"
-nonsslinkws="ss://${shadowsocks_base64e}@${domain}:80?path=/ss-ws&security=none&encryption=none&type=ws#${user}"
+sslinkws="ss://${shadowsocks_base64e}@${domain}:2083?path=/ss-ws&security=tls&encryption=none&type=ws#${user}"
+nonsslinkws="ss://${shadowsocks_base64e}@${domain}:8080?path=/ss-ws&security=none&encryption=none&type=ws#${user}"
 
 #buat ss GRPC
-sslinkgrpc="ss://${shadowsocks_base64e}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=ss-grpc&sni=bug.com#${user}"
-nonsslinkgrpc="ss://${shadowsocks_base64e}@${domain}:80?mode=gun&security=none&encryption=none&type=grpc&serviceName=ss-grpc&sni=bug.com#${user}"
+sslinkgrpc="ss://${shadowsocks_base64e}@${domain}:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=ss-grpc&sni=bug.com#${user}"
+nonsslinkgrpc="ss://${shadowsocks_base64e}@${domain}:8080?mode=gun&security=none&encryption=none&type=grpc&serviceName=ss-grpc&sni=bug.com#${user}"
 
 systemctl restart xray
 #buatshadowsocks custom
@@ -394,7 +394,7 @@ echo -e "\\E[0;41;36m        Sodosok WS/GRPC Account    \E[0m" | tee -a /etc/log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
 echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "Port WS : ${tls}/80" | tee -a /etc/log-create-user.log
+echo -e "Port WS : ${tls}/8080" | tee -a /etc/log-create-user.log
 echo -e "Port GRPC : ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Password : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "Cipers : aes-128-gcm" | tee -a /etc/log-create-user.log

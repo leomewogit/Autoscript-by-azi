@@ -103,16 +103,6 @@ apt-get install net-tools -y
 apt-get remove apache2 -y
 apt-get purge apache2* -y
 
-# install webserver
-apt -y install nginx
-cd
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://gitlab.com/hidessh/baru/-/raw/main/nginx.conf"
-mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://gitlab.com/hidessh/baru/-/raw/main/vps.conf"
-/etc/init.d/nginx restart
-
 # install badvpn
 cd
 wget -O /usr/bin/badvpn-udpgw "https://gitlab.com/hidessh/baru/-/raw/main/badvpn-udpgw64"

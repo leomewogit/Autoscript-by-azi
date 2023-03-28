@@ -76,6 +76,7 @@ echo -e "Dropbear: 44, 69, 143"
 echo -e "SSL/TLS: 447"
 echo -e "SSH Websocket SSL/TLS: 8443"
 echo -e "SSH Websocket HTTP: 8080"
+echo -e "SSH Websocket Direct: 8080
 echo -e "BadVPN UDPGW: 7100,7200,7300"
 echo -e "Proxy CloudFront: [OFF]"
 echo -e "Proxy Squid: [ON]"

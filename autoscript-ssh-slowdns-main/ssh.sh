@@ -272,7 +272,6 @@ echo "DROPBEAR_BANNER="/etc/issue.net"" >> /etc/default/dropbear
 cd /usr/bin
 wget -O about "https://gitlab.com/hidessh/baru/-/raw/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu.sh"
-wget -O usernew "https://gitlab.com/hidessh/baru/-/raw/main/usernew.sh"
 wget -O trial "https://gitlab.com/hidessh/baru/-/raw/main/trial.sh"
 wget -O hapus "https://gitlab.com/hidessh/baru/-/raw/main/hapus.sh"
 wget -O member "https://gitlab.com/hidessh/baru/-/raw/main/member.sh"

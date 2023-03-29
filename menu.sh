@@ -29,7 +29,7 @@ CEKEXPIRED () {
         if [[ $today < $Exp1 ]]; then
         echo "status script aktif.."
         else
-        echo "SCRIPT ANDA EXPIRED";
+        echo "Script mu expired brother";
         exit 0
 fi
 }

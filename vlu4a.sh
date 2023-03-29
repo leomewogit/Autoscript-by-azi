@@ -96,7 +96,7 @@ if [ $MYIP = $IZIN ]; then
 echo "IZIN DI TERIMA!!"
 CEKEXPIRED
 else
-echo "IZIN DI TOLAK!!";
+echo "Akses di tolak!! Benget sia hurung!!";
 exit 0
 fi
 

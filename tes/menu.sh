@@ -166,9 +166,9 @@ fi
 }
 clear
 clear
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                       ⇱ INFORMASI VPS ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -181,31 +181,34 @@ echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
 echo -e "□ AutoScript By       =  ${GREEN}( AZI GAMING404 )${NC}"
 
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                       ⇱ STATUS LAYANAN ⇲                    \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${status_xray} ]      [ ${GREEN}NGINX${NC} : ${status_nginx} ]"
-echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1┌────────────────────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
 echo -e "$COLOR1│\033[0m ${Blue} $ssh1     $vmc       $vlx      $trx           $ssx   $NC"
-echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1└────────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                       ⇱ CYBER VPN ⇲                          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                           ⇱ CYBER VPN ⇲                     \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "${COLOR1}[01]${NC} • [${YELLOW}SSH${NC}]      ${COLOR1}[08]${NC} • [${YELLOW}BACKUP${NC}]"
-echo -e "${COLOR1}[02]${NC} • [${YELLOW}VMESS${NC}]    ${COLOR1}[09]${NC} • [${YELLOW}SET${NC}]"
-echo -e "${COLOR1}[03]${NC} • [${YELLOW}VLESS${NC}]    ${COLOR1}[10]${NC} • [${YELLOW}INFORMATION${NC}]"
-echo -e "${COLOR1}[04]${NC} • [${YELLOW}TROJAN${NC}]   ${COLOR1}[11]${NC} • [${YELLOW}ADD DOMAIN${NC}]"
-echo -e "${COLOR1}[05]${NC} • [${YELLOW}SODOS${NC}]    ${COLOR1}[12]${NC} • [${YELLOW}CERT${NC}]"
-echo -e "${COLOR1}[06]${NC} • [${YELLOW}SET DNS${NC}]  ${COLOR1}[13]${NC} • [${YELLOW}LOAD VPS${NC}]"
-echo -e "${COLOR1}[07]${NC} • [${YELLOW}SET BOT${NC}]  ${COLOR1}[14]${NC} • [${YELLOW}CHANGE PW VPS${NC}]"
+echo -e "${COLOR1}[01]${NC} • [${YELLOW}SSH${NC}]         ${COLOR1}[11]${NC} • [${YELLOW}BACKUP${NC}]"
+echo -e "${COLOR1}[02]${NC} • [${YELLOW}VMESS${NC}]       ${COLOR1}[12]${NC} • [${YELLOW}INFO RUNNING${NC}]"          
+echo -e "${COLOR1}[03]${NC} • [${YELLOW}VLESS${NC}]       ${COLOR1}[13]${NC} • [${YELLOW}INFORMATION${NC}]"  
+echo -e "${COLOR1}[04]${NC} • [${YELLOW}TROJAN${NC}]      ${COLOR1}[14]${NC} • [${YELLOW}ADD DOMAIN${NC}]"
+echo -e "${COLOR1}[05]${NC} • [${YELLOW}SODOSOK${NC}]     ${COLOR1}[15]${NC} • [${YELLOW}CERT${NC}]"
+echo -e "${COLOR1}[06]${NC} • [${YELLOW}SET DNS${NC}]     ${COLOR1}[16]${NC} • [${YELLOW}WEBMIN${NC}]"
+echo -e "${COLOR1}[07]${NC} • [${YELLOW}REBOOT  ${NC}]    ${COLOR1}[17]${NC} • [${YELLOW}CHANGE PW VPS${NC}]"
+echo -e "${COLOR1}[08]${NC} • [${YELLOW}AUTO KILL${NC}]   ${COLOR1}[18]${NC} • [${YELLOW}AUTO REBOOT${NC}]"
+echo -e "${COLOR1}[09]${NC} • [${YELLOW}AUTO REBOOT${NC}] ${COLOR1}[19]${NC} • [${YELLOW}RESTART ALL SERVCE${NC}]"
+echo -e "${COLOR1}[10]${NC} • [${YELLOW}BANNER VPS${NC}]  ${COLOR1}[20]${NC} • [${YELLOW}UPDATE SCRIPT${NC}]"
 echo -e " ${RED}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ AZI GAMING404 ⇲                         \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                         ⇱ AZI GAMING404 ⇲                   \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""
 
@@ -216,15 +219,21 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-dns ;;
-06 | 7) clear ; menu-theme ;;
-07 | 8) clear ; menu-backup ;;
-09 | 9) clear ; menu-set ;;
-10) clear ; info ;;
-11) clear ; add-host ;;
-12) clear ; crtxray ;;
-13) clear ; gotop ;;
-14) clear ; passwd ;;
+06 | 6) clear ; fix ;;
+07 | 7) clear ; reboot ;;
+08 | 8) clear ;  tendang ;;
+09 | 9) clear ; autoreboot ;;
+10) clear ; nano /etc/issue.net ;;
+11) clear ; menu-backup ;;
+12) clear ; running ;;
+13) clear ; cat /root/log-install.txt ;;
+14) clear ; addhost ;;
+15) clear ; genssl ;;
+16) clear ; wbm ;;
+17) clear ; passwd ;;
+18) clear ; autoreboot ;;
+19) clear ; restart ;;
+20) clear ; updatsc ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

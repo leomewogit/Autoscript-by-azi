@@ -167,7 +167,7 @@ fi
 clear
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ INFORMASI VPS                  \E[0m"
+echo -e "\E[44;1;39m            ⇱ INFORMASI VPS                    \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
@@ -182,10 +182,10 @@ echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
 echo -e "□ AutoScript By       =  ${GREEN}( AZI GAMING404 )${NC}"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m           ⇱ STATUS LAYANAN ⇲                    \E[0m"
+echo -e "\E[44;1;39m           ⇱ STATUS LAYANAN ⇲                  \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${status_xray} ]"  
+echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}] [ ${GREEN}XRAY${NC} : ${status_xray} ]"  
 echo -e " [ ${GREEN}NGINX${NC} : ${status_nginx} ]"
 echo -e "$COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
@@ -194,7 +194,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "${RED}                   V.3.0.0 LTS"
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m               ⇱ CYBER VPN ⇲                     \E[0m"
+echo -e "\E[44;1;39m               ⇱ CYBER VPN ⇲                   \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e "${COLOR1}[01]${NC} • [${YELLOW}SSH${NC}]         ${COLOR1}[11]${NC} • [${YELLOW}BACKUP${NC}]"

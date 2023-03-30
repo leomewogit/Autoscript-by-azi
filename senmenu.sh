@@ -10,7 +10,7 @@ wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Agunxzzz/XrayCol/m
 wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-trgo.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/autoreboot.sh"
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/tendang.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/running.sh"
 wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/cek-trafik.sh"

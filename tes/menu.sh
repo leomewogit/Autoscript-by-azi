@@ -13,7 +13,7 @@ ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "memeriksa vps anda"
-sleep 1
+sleep 0.5
 CEKEXPIRED () {
         today=$(date -d +1day +%Y -%m -%d)
         Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')

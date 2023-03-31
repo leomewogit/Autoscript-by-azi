@@ -186,6 +186,7 @@ echo -e "\E[44;1;39m            ⇱ STATUS LAYANAN ⇲                 \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}] [ ${GREEN}XRAY${NC} : ${status_xray} ]"  
+echo -e
 echo -e "                  [ ${GREEN}NGINX${NC} : ${status_nginx} ]"
 echo -e "${ungu}┌───────────────────────────────────────────────┐${NC}"
 echo -e "${ungu}│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"

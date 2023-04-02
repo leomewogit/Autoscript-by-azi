@@ -18,9 +18,9 @@ sldomain=$(cat /root/nsdomain)
 cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /etc/slowdns/server.pub)
 clear
-echo -e "${GREEN}============================================="
-echo -e "${CYAN}                 SCRPIT PREMIUM"
-echo -e "${GREEN}============================================="
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                 ⇱ CREATE ACCOUNT ⇲                 \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${CYAN}"
 read -p "Username : " Login
 read -p "Password : " Pass
@@ -57,9 +57,9 @@ hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 clear
 echo -e ""
-echo -e "${GREEN}============================================="
-echo -e "${CYAN}          Informasi SSH & OpenVPN"
-echo -e "${GREEN}============================================="
+echoecho -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                 ⇱ INFORMASI AKUN SSH ⇲                 \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${CYAN}Username: $Login"
 echo -e "Password: $Pass"
 echo -e "Created: $hariini"

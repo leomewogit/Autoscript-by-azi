@@ -149,9 +149,9 @@ fi
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    status_nginx="${GREEN}ON${NC}"
+    status_nginx="${GREEN}Aktif${NC}"
 else
-    status_nginx="${RED}OFF${NC}"
+    status_nginx="${RED}Tidak aktif${NC}"
 fi
 
 # // SSH Websocket Proxy
@@ -210,7 +210,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m            ⇱ STATUS LAYANAN ⇲                 \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "  ${GREEN}SSH WebSocket${NC}:[${GREEN}ON${NC}]  ${GREEN}XRAY${NC}:[${status_xray}]  ${GREEN}NGINX${NC} : [${status_nginx}]"
+echo -e "  ${GREEN}SSH WebSocket${NC}:[${status_ws}}]  ${GREEN}XRAY${NC}:[${status_xray}]  ${GREEN}NGINX${NC} : [${status_nginx}]"
 echo -e "${ungu}┌───────────────────────────────────────────────┐${NC}"
 echo -e "${ungu}│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
 echo -e "${ungu}│\033[0m ${Blue} $ssh1     $vmc       $vlx      $trx           $ssx   $NC"

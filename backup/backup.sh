@@ -25,6 +25,7 @@ $email
 EOF
 fi
 clear
+figlet "Backup"
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup

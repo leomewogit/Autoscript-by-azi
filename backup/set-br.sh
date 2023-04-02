@@ -43,11 +43,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://${akbarvpn}/autobackup.sh"
-wget -O backup "https://${akbarvpn}/backup.sh"
-wget -O restore "https://${akbarvpn}/restore.sh"
-wget -O strt "https://${akbarvpn}/strt.sh"
-wget -O limitspeed "https://${akbarvpn}/limitspeed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/strt.sh"
+wget -O limitspeed "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore

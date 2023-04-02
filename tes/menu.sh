@@ -228,7 +228,7 @@ echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[14]${NC} • $
 echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[15]${NC} • ${COLOR1}CERT${NC}"
 echo -e "${GREEN}[06]${NC} • ${COLOR1}SET DNS${NC}     ${GREEN}[16]${NC} • ${COLOR1}WEBMIN${NC}"
 echo -e "${GREEN}[07]${NC} • ${COLOR1}REBOOT  ${NC}    ${GREEN}[17]${NC} • ${COLOR1}CHANGE PW VPS${NC}"
-echo -e "${GREEN}[08]${NC} • ${COLOR1}AUTO KILL${NC}   ${GREEN}[18]${NC} • ${COLOR1}AUTO REBOOT${NC}"
+echo -e "${GREEN}[08]${NC} • ${COLOR1}LIMIT SPEED${NC}   ${GREEN}[18]${NC} • ${COLOR1}AUTO REBOOT${NC}"
 echo -e "${GREEN}[09]${NC} • ${COLOR1}AUTO REBOOT${NC} ${GREEN}[19]${NC} • ${COLOR1}RESTART ALL SERVCE${NC}"
 echo -e "${GREEN}[10]${NC} • ${COLOR1}BANNER VPS${NC}  ${GREEN}[20]${NC} • ${COLOR1}UPDATE SCRIPT${NC}"
 echo -e " ${RED}"
@@ -247,7 +247,7 @@ case $opt in
 05 | 5) clear ; menu-ss ;;
 06 | 6) clear ; fix ;;
 07 | 7) clear ; reboot ;;
-08 | 8) clear ;  tendang ;;
+08 | 8) clear ;  limitspeed ;;
 09 | 9) clear ; autoreboot ;;
 10) clear ; nano /etc/issue.net ;;
 11) clear ; menu-backup ;;

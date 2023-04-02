@@ -139,11 +139,11 @@ fi
 export IP=$( curl -s https://ipinfo.io/ip/ )
 
 # // SSH Websocket Proxy
-ssh_ws=$( systemctl status ws-epro | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+ssh_ws=$( systemctl status dropbear | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws="${GREEN}ON${NC}"
+    status_ws="${GREEN}aktif${NC}"
 else
-    status_ws="${RED}OFF${NC}"
+    status_ws="${RED}tidak aktif${NC}"
 fi
 
 # // nginx
@@ -157,9 +157,9 @@ fi
 # // SSH Websocket Proxy
 xray=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 if [[ $xray == "running" ]]; then
-    status_xray="${GREEN}ON${NC}"
+    status_xray="${GREEN}aktif${NC}"
 else
-    status_xray="${RED}OFF${NC}"
+    status_xray="${RED}tidak aktif${NC}"
 fi
 
 clear

@@ -43,7 +43,7 @@ wget -q -O /root/versi "https://raw.githubusercontent.com/Azigaming404/Autoscrip
 wget -q -O /usr/bin/updatsc "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/update.sh"
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-backup.sh"
 wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/cf.sh"
-wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/set-br.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/set-br.sh
 bash set-br.sh
 
 chmod +x /usr/bin/menu

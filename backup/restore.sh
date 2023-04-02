@@ -40,4 +40,4 @@ cp crontab /etc/
 strt
 rm -rf /root/backup
 rm -f backup.zip
-echo Done
+echo "Restore Berhasil!!!" | lolcat

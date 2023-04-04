@@ -136,7 +136,8 @@ wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Agunxzz
 
 wget -q -O xraymode.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/Xray%20mode/xraymode.sh && chmod +x xraymode.sh && ./xraymode.sh
 sleep 1 
-wget  https://raw.githubusercontent.com/fisabiliyusri/MANTAPV3/main/nginx/nginx.sh && chmod +x nginx.sh && ./nginx.sh
+wget  https://raw.githubusercontent.com/fisabiliyusri/MANTAPV3/main/nginx/nginx.sh
+bash nginx.sh
 sleep 1 
 
 # Installing Xray Service

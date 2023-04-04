@@ -206,20 +206,20 @@ echo "------------------------------------------------------------"
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket           : 8080" | tee -a log-install.txt
-echo "   - SSH SSL Websocket       : 8443" | tee -a log-install.txt
+echo "   - SSH Websocket           : 80" | tee -a log-install.txt
+echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
 echo "   - Stunnel4                : 447, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 69,80, 143" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
-echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
-echo "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
-echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
-echo "   - Trojan WS               : 443" | tee -a log-install.txt
-echo "   - Trojan GO               : 443" | tee -a log-install.txt
-echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vmess TLS         : 2083" | tee -a log-install.txt
+echo "   - XRAY  Vmess None TLS    : 8080" | tee -a log-install.txt
+echo "   - XRAY  Vless TLS         : 2083" | tee -a log-install.txt
+echo "   - XRAY  Vless None TLS    : 8080" | tee -a log-install.txt
+echo "   - Trojan GRPC             : 2083" | tee -a log-install.txt
+echo "   - Trojan WS               : 2083" | tee -a log-install.txt
+echo "   - Trojan GO               : 2083" | tee -a log-install.txt
+echo "   - Sodosok WS/GRPC         : 2083" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt

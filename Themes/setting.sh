@@ -118,7 +118,7 @@ then
 clear
 neofetch
 echo -e "${BlueCyan}==================================================="
-echo -e "{WhiteB}              Credit Script By : Azigaming404"
+echo -e "${WhiteB}              Credit Script By : Azigaming404"
 echo "                 t.me/azigaming404"
 echo -e "${BlueCyan}==================================================="
 echo "--------------------------------------------------------------"

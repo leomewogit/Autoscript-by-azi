@@ -36,6 +36,7 @@ echo "[13].restart all service"
 echo "[14].WEBMIN"
 echo "[15].About"
 echo -e "${BlueCyan}"
+echo "_______________________________________________________________"
 read -p    "Pilih Nomor :" bro
 
 

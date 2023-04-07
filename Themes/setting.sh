@@ -177,7 +177,7 @@ case $AutoKill in
         esac
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
-}
+
 
 if [ $bro = 12 ] || [ $bro = 12 ]
 then

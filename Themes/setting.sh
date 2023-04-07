@@ -57,6 +57,7 @@ fi
 if [ $bro = 5 ] || [ $bro = 5 ]
 then
 cek-speed
+fi
 if [ $bro = 6 ] || [ $bro = 6 ]
 then
 echo "kill all proces in your cpu"

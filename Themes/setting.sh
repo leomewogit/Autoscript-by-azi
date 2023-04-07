@@ -33,7 +33,8 @@ echo "[10].Change Banner Dropbear"
 echo "[11].Auto kill multi login"
 echo "[12].limit speed vps"
 echo "[13].restart all service"
-echo "[14].About"
+echo "[14].WEBMIN"
+echo "[15].About
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
 
@@ -106,8 +107,12 @@ then
 clear
 restart
 fi
-
 if [ $bro = 14 ] || [ $bro = 14 ]
+then
+clear
+wbm
+fi
+if [ $bro = 15 ] || [ $bro = 15 ]
 then
 clear
 neofetch

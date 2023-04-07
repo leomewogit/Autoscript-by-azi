@@ -221,16 +221,11 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                 ⇱ CYBER VPN ⇲                 \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH${NC}         ${GREEN}[11]${NC} • ${COLOR1}BACKUP${NC}"
-echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[12]${NC} • ${COLOR1}INFO RUNNING${NC}"          
-echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[13]${NC} • ${COLOR1}INFORMATION${NC}"  
-echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[14]${NC} • ${COLOR1}ADD DOMAIN${NC}"
-echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[15]${NC} • ${COLOR1}CERT${NC}"
-echo -e "${GREEN}[06]${NC} • ${COLOR1}SET DNS${NC}     ${GREEN}[16]${NC} • ${COLOR1}WEBMIN${NC}"
-echo -e "${GREEN}[07]${NC} • ${COLOR1}REBOOT  ${NC}    ${GREEN}[17]${NC} • ${COLOR1}CHANGE PW VPS${NC}"
-echo -e "${GREEN}[08]${NC} • ${COLOR1}LIMIT SPEED${NC} ${GREEN}[18]${NC} • ${COLOR1}AUTO REBOOT${NC}"
-echo -e "${GREEN}[09]${NC} • ${COLOR1}AUTO REBOOT${NC} ${GREEN}[19]${NC} • ${COLOR1}RESTART ALL SERVCE${NC}"
-echo -e "${GREEN}[10]${NC} • ${COLOR1}BANNER VPS${NC}  ${GREEN}[20]${NC} • ${COLOR1}UPDATE SCRIPT${NC}"
+echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH${NC}         ${GREEN}[06]${NC} • ${COLOR1}BACKUP${NC}"
+echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[07]${NC} • ${COLOR1}INFO RUNNING${NC}"          
+echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[08]${NC} • ${COLOR1}INFORMATION${NC}"  
+echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • ${COLOR1}SETTINGS${NC}"
+echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[10]${NC} • ${COLOR1}UPDATES${NC}"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                ⇱ AZI GAMING404 ⇲              \E[0m"
@@ -245,21 +240,11 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; fix ;;
-07 | 7) clear ; reboot ;;
-08 | 8) clear ;  limitspeed ;;
-09 | 9) clear ; autoreboot ;;
-10) clear ; nano /etc/issue.net ;;
-11) clear ; menu-backup ;;
-12) clear ; running ;;
-13) clear ; cat /root/log-install.txt ;;
-14) clear ; addhost ;;
-15) clear ; genssl ;;
-16) clear ; wbm ;;
-17) clear ; passwd ;;
-18) clear ; autoreboot ;;
-19) clear ; restart ;;
-20) clear ; updatsc ;;
+06 | 6) clear ; menu-backup ;;
+07 | 7) clear ; running ;;
+08 | 8) clear ;  info ;;
+09 | 9) clear ; setting ;;
+10) clear ; updatsc ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

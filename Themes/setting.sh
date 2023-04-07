@@ -34,7 +34,7 @@ echo "[11].Auto kill multi login"
 echo "[12].limit speed vps"
 echo "[13].restart all service"
 echo "[14].WEBMIN"
-echo "[15].About
+echo "[15].About"
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
 

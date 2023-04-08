@@ -23,7 +23,7 @@ echo
 echo "[1].Add Host"
 echo "[2].Renew Cert"
 echo "[3].Dns pointing fix"
-echo "[4].Themes"
+echo "[4].limit speed"
 echo "[5].speedtest"
 echo "[6].kill all proces"
 echo "[7].clear log"
@@ -58,7 +58,7 @@ fi
 if [ $bro = 4 ] || [ $bro = 4 ]
 then
 clear
-tema
+limitspeed
 fi
 if [ $bro = 5 ] || [ $bro = 5 ]
 then

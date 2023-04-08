@@ -34,7 +34,8 @@ echo "[11].Auto kill multi login"
 echo "[12].limit speed vps"
 echo "[13].restart all service"
 echo "[14].WEBMIN"
-echo "[15].About"
+echo "[15].Cek semua port"
+echo "[16].About"
 echo -e "${BlueCyan}"
 echo "_______________________________________________________________"
 read -p    "Pilih Nomor :" bro
@@ -114,6 +115,11 @@ clear
 wbm
 fi
 if [ $bro = 15 ] || [ $bro = 15 ]
+then
+clear
+netstat -tnlp
+fi
+if [ $bro = 16 ] || [ $bro = 16 ]
 then
 clear
 neofetch

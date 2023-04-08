@@ -10,6 +10,11 @@ trx=$(grep -c -E "^#! " "/etc/xray/config.json")
 
 ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 
+# status
+rm -rf /root/status
+wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
+
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "memeriksa vps anda"

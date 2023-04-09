@@ -25,7 +25,7 @@ export ungu='\033[0;35m'
 # Getting
 
 domain=$(cat /etc/xray/domain)
-sldomain=$(cat /root/nsdomain)
+sldomain=$(cat /usr/sbin/potatonc/slowdns/nameserver)
 cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /usr/sbin/potatonc/slowdns/server.pub)
 clear

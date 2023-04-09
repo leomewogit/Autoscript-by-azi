@@ -35,7 +35,8 @@ echo "[12].limit speed vps"
 echo "[13].restart all service"
 echo "[14].WEBMIN"
 echo "[15].Cek semua port"
-echo "[16].About"
+echo "[16].Slowdns setting"
+echo "[17].About"
 echo -e "${BlueCyan}"
 echo "__________________________________________________________"
 read -p    "Pilih Nomor :" bro
@@ -120,6 +121,12 @@ clear
 netstat -tnlp
 fi
 if [ $bro = 16 ] || [ $bro = 16 ]
+then
+clear
+bash wslow.sh
+fi
+
+if [ $bro = 17 ] || [ $bro = 17 ]
 then
 clear
 neofetch

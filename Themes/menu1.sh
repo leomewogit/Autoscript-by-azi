@@ -216,7 +216,7 @@ case $opt in
 09 | 9) clear ; setting ;;
 10) clear ; updatsc ;;
 
-0) clear ; menu ;;
-x) exit ;;
-*) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; ./menu ;;
+100) clear ; $up2u ;;
+00 | 0) clear ; menu ;;
+*) clear ; menu ;;
 esac

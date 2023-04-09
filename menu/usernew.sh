@@ -85,7 +85,7 @@ echo -e "${GREEN}===============Service-Port=================="
 echo -e "OpenSSH: 22"
 echo -e "Dropbear: 44, 69, 143"
 echo -e "SSL/TLS: 447"
-echo -e "SlowDNS port: 53,5300
+echo -e "SlowDNS port: 53,5300"
 echo -e "SSH Websocket SSL/TLS: 8443"
 echo -e "SSH Websocket HTTP: 8080"
 echo -e "SSH Websocket Direct: 8080"

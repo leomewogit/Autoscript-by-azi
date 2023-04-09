@@ -27,7 +27,7 @@ export ungu='\033[0;35m'
 domain=$(cat /etc/xray/domain)
 sldomain=$(cat /root/nsdomain)
 cdndomain=$(cat /root/awscdndomain)
-slkey=$(cat /etc/slowdns/server.pub)
+slkey=$(cat /usr/sbin/potatonc/slowdns/server.pub)
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                 ⇱ CREATE ACCOUNT ⇲            \E[0m"

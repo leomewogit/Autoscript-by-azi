@@ -163,18 +163,12 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[39;1;92m                     ⇱ MENU SERVICE ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH MENU        $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}GEN-SSL / CERTV $NC"
-echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}BANNER CHAGE $NC"
-echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CEK RUNNING SERVICE $NC"
-echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}CEK TRAFIC $NC"
-echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}SPEEDTEDT  $NC"
-echo -e " ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}TENDANG         $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH USE $NC"
-echo -e " ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}AUTO REBOOT     $NC  ${BICyan}[${BIWhite}18${BICyan}]${RED} • ${NC}${CYAN}LIMMIT SPEED $NC"
-echo -e " ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}REBOOT          $NC  ${BICyan}[${BIWhite}19${BICyan}]${RED} • ${NC}${CYAN}WEBMIN $NC"
-echo -e " ${BICyan}[${BIWhite}09${BICyan}]${RED} •${NC} ${CYAN}RESTART SERVICE $NC  ${BICyan}[${BIWhite}20${BICyan}]${RED} • ${NC}${CYAN}SCRIPT INFO $NC"
-echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}BACKUP {OFF}    $NC  ${BICyan}[${BIWhite}21${BICyan}]${RED} • ${NC}${CYAN}CLEAR LOG $NC"
-echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}22${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
-echo -e " ${BICyan}[${BIWhite} X ${BICyan}] TYPE X FOR EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
+echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH MENU        $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}BACKUP$NC"
+echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
+echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}INFO VPS $NC"
+echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
+echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}CEKING UPDATE  $NC"
+echo -e " ${BICyan}[${BIWhite}11${BICyan}]${echo -e " ${BICyan}[${BIWhite} X ${BICyan}] TYPE X FOR EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
@@ -182,30 +176,16 @@ echo
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; menu-ssh ;;
-2) clear ; menu-vmess ;;
-3) clear ; menu-vless ;;
-4) clear ; menu-trojan ;;
-5) clear ; menu-ss ;;
-6) clear ; tendang ;;
-7) clear ; autoreboot ;;
-8) clear ; reboot ;;
-9) clear ; restart ;;
-10) clear ; menu ;;
-11) clear ; addhost ;;
-12) clear ; genssl ;;
-13) clear ; nano /etc/issue.net ;;
-14) clear ; running ;;
-15) clear ; cek-trafik ;;
-16) clear ; cek-speed ;;
-17) clear ; cek-bandwidth ;;
-#18) clear ; cek-ram ;;
-18) clear ; limit-speed ;;
-19) clear ; wbm ;;
-20) clear ; cat /root/log-install.txt ;;
-21) clear ; clearlog ;;
-#99) clear ; update ;;
-22) clear ; fix ;;
+01 | 1) clear ; menu-ssh ;;
+02 | 2) clear ; menu-vmess ;;
+03 | 3) clear ; menu-vless ;;
+04 | 4) clear ; menu-trojan ;;
+05 | 5) clear ; menu-ss ;;
+06 | 6) clear ; menu-backup ;;
+07 | 7) clear ; running ;;
+08 | 8) clear ;  info ;;
+09 | 9) clear ; setting ;;
+10) clear ; updatsc ;;
 
 0) clear ; menu ;;
 x) exit ;;

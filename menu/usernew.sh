@@ -59,6 +59,7 @@ systemctl restart server-sldns
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart ssh-ohp
+systemctl restart rc-local
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login

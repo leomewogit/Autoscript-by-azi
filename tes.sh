@@ -116,8 +116,13 @@ chmod +x /root/.acme.sh/acme.sh
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 echo -e "${OKEY} Your Domain : $domain"
 sleep 2
+echo "installing ssh websocket"
+sleep 1
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/setup.sh
 bash setup.sh
+sleep 2
+clear
+echo "installing All Xray"
 sleep 1
 wget -q -O janggut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/janggut.sh && chmod +x janggut.sh && ./janggut.sh
 sleep 1

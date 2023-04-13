@@ -20,10 +20,10 @@ echo -e "${yellow}                     menu settings"
 echo -e "${BlueCyan}__________________________________________________${NC}"
 echo -e "${WhiteB}"
 echo
-echo "[1].Default Themes"
-echo "[2].Renew Cert"
-echo "[3].Dns pointing fix"
-echo "[4].Themes"
+echo "[1].(Default) Light Themes"
+echo "[2].Zero Dark Light"
+echo "[3].Dragon Red"
+echo "[4].Yello Light"
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
 

@@ -194,7 +194,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH MENU        $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}BACKUP$NC"
 echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
-echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}INFO VPS $NC"
+echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}TEMA VPS $NC"
 echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
 echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}CEKING UPDATE  $NC" 
 echo -e " ${RED}"
@@ -211,7 +211,7 @@ case $opt in
 05 | 5) clear ; menu-ss ;;
 06 | 6) clear ; menu-backup ;;
 07 | 7) clear ; running ;;
-08 | 8) clear ;  info ;;
+08 | 8) clear ;  bash thema.sh ;;
 09 | 9) clear ; setting ;;
 10) clear ; updatsc ;;
 

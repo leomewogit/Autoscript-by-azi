@@ -20,16 +20,16 @@ echo -e "${yellow}                     menu settings"
 echo -e "${BlueCyan}__________________________________________________${NC}"
 echo -e "${WhiteB}"
 echo
-echo "[1].Add Host"
+echo "[1].Default Themes"
 echo "[2].Renew Cert"
 echo "[3].Dns pointing fix"
 echo "[4].Themes"
-echo "[14].About"
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
 
 
 if [ $bro = 1 ] || [ $bro = 1 ]
 then
-
+rm -rf /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/menu.sh" && chmod 777 /usr/bin/menu
 fi

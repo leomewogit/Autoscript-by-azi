@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
@@ -57,8 +58,6 @@ export IP=$( curl -s https://ipinfo.io/ip/ )
 # // Exporting Network Interface
 export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
 
-
-clear
 
 GREEN='\033[0;32m'
 PURPLE='\033[0;35m'

@@ -19,7 +19,6 @@ echo -e "${BlueCyan}==================================================${NC}"
 echo -e "${yellow}                     menu settings"
 echo -e "${BlueCyan}__________________________________________________${NC}"
 echo -e "${WhiteB}"
-echo
 echo "[1].(Default) Light Themes"
 echo "[2].RED Dark Light"
 echo "[3].Dragon PURPLE"

@@ -46,4 +46,10 @@ rm -rf /usr/bin/menu
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/menu2.sh" && chmod 777 /usr/bin/menu
 menu
 fi
+if [ $bro = 4 ] || [ $bro = 4 ]
+then
+rm -rf /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/menu3.sh" && chmod 777 /usr/bin/menu
+menu
+fi
 

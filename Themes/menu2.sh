@@ -1,4 +1,5 @@
 #!/bin/bash
+# =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 
 vmc=$(grep -c -E "^### " "/etc/xray/config.json")

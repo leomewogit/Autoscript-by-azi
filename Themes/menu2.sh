@@ -196,7 +196,7 @@ fi
 }
 clear
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                ⇱ INFORMASI VPS ⇲                 ${NC}"
+echo -e "${CYAN}                ⇱ SCRIPT PREMIUM XRAY⇲                 ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"

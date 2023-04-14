@@ -21,8 +21,8 @@ echo -e "${BlueCyan}__________________________________________________${NC}"
 echo -e "${WhiteB}"
 echo
 echo "[1].(Default) Light Themes"
-echo "[2].Zero Dark Light"
-echo "[3].Dragon Red"
+echo "[2].RED Dark Light"
+echo "[3].Dragon PURPLE"
 echo "[4].Yello Light"
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
@@ -40,3 +40,10 @@ rm -rf /usr/bin/menu
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/menu1.sh" && chmod 777 /usr/bin/menu
 menu
 fi
+if [ $bro = 3 ] || [ $bro = 3 ]
+then
+rm -rf /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/menu2.sh" && chmod 777 /usr/bin/menu
+menu
+fi
+

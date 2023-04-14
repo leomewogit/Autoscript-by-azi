@@ -130,10 +130,8 @@ if [ $bro = 17 ] || [ $bro = 17 ]
 then
 clear
 neofetch
-echo -e "${BlueCyan}==================================================="
-echo -e "${WhiteB}              Credit Script By : Azigaming404"
-echo "                 t.me/azigaming404"
-echo -e "${BlueCyan}==================================================="
+echo -e "${yellow}"
+cat /root/log-install.txt
 echo "--------------------------------------------------------------"
 echo "                Terimakasih sudah menggunakan" 
 echo "                   script premium CyberVPN"

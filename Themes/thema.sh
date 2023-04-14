@@ -23,7 +23,7 @@ echo
 echo "[1].(Default) Light Themes"
 echo "[2].RED Dark Light"
 echo "[3].Dragon PURPLE"
-echo "[4].Yello Light"
+echo "[4].Yellow Light"
 echo -e "${BlueCyan}"
 read -p    "Pilih Nomor :" bro
 

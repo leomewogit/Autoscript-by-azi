@@ -1,3 +1,15 @@
+#!/bin/bash
+vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
+
+vmc=$(grep -c -E "^### " "/etc/xray/config.json")
+
+ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+
+trx=$(grep -c -E "^#! " "/etc/xray/config.json")
+
+ssx=$(grep -c -E "^## " "/etc/xray/config.json")
+
+
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green

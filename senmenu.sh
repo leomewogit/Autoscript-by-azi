@@ -47,6 +47,7 @@ wget -q -O /usr/bin/setting "https://raw.githubusercontent.com/Azigaming404/Auto
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/wslow.sh
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/set-br.sh
 bash set-br.sh
+wget https://github.com/Azigaming404/Autoscript-by-azi/blob/main/Themes/thema.sh
 
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/add-ws

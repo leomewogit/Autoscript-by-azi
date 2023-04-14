@@ -196,11 +196,7 @@ fi
 }
 clear
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                  ⇱ SCRIPT PREMIUM ⇲                 ${NC}"
-echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-neofetch
-echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                  ⇱ INFORMASI VPS ⇲                 ${NC}"
+echo -e "${CYAN}                ⇱ INFORMASI VPS ⇲                 ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -214,7 +210,7 @@ echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
 echo -e "□ AutoScript By       =  ${GREEN}( AZI GAMING404 )${NC}"
 
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                  ⇱ STATUS LAYANAN ⇲                 ${NC}"
+echo -e "${CYAN}                ⇱ STATUS LAYANAN ⇲                 ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
 echo -e "  ${GREEN}SSH WebSocket${NC}:[${status_ws}]  ${GREEN}XRAY${NC}:[${status_xray}]  ${GREEN}NGINX${NC} : [${status_nginx}]"
@@ -225,7 +221,7 @@ echo -e "${ungu}└────────────────────�
 echo -e "${CYAN}                      V.3.0.0 LTS"
 echo -e ""
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                      ⇱ CYBER VPN ⇲                 ${NC}"
+echo -e "${CYAN}                   ⇱ CYBER VPN ⇲                 ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
 echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH${NC}         ${GREEN}[06]${NC} • ${COLOR1}BACKUP${NC}"
@@ -235,7 +231,7 @@ echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • $
 echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[10]${NC} • ${COLOR1}UPDATES${NC}"
 echo -e " ${RED}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}                     ⇱ AZI GAMING404 ⇲              ${NC}"
+echo -e "${CYAN}                  ⇱ AZI GAMING404 ⇲              ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 
 echo -e ""

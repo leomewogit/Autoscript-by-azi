@@ -48,7 +48,7 @@ wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autos
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/set-br.sh
 bash set-br.sh
 wget https://github.com/Azigaming404/Autoscript-by-azi/blob/main/Themes/thema.sh
-
+wget https://raw.githubusercontent.com/Azigaming404/CyberCHAT_BOT/main/3d.flf
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws

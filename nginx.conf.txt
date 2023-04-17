@@ -47,7 +47,7 @@ open_log_file_cache max=1000;
 #}
 
 #  server {
-#	  listen 2083 so_keepalive=on;
+#	  listen 443 so_keepalive=on;
 #	  proxy_pass ;
 #	  ssl_preread on;
 #  }

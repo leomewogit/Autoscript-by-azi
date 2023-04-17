@@ -76,6 +76,28 @@ apt dist-upgrade -y
 clear
 clear && clear && clear
 clear;clear;clear
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "memeriksa vps anda"
+sleep 0.5
+CEKEXPIRED () {
+        today=$(date -d +1day +%Y -%m -%d)
+        Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
+        if [[ $today < $Exp1 ]]; then
+        echo "status script aktif.."
+        else
+        echo "SCRIPT ANDA EXPIRED";
+        exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo "IZIN DI TERIMA!!"
+CEKEXPIRED
+else
+echo "Akses di tolak!! Benget sia hurung!!";
+exit 0
+fi
 read -p "Input Your Domain : " domain
 if [[ $domain == "" ]]; then
 clear
@@ -175,7 +197,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[   THEMOON ]-===================="
+echo "=====================-[   CYBERVPN  ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""

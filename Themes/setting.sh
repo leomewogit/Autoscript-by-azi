@@ -22,7 +22,7 @@ echo -e "${WhiteB}"
 echo
 echo "[1].Add Host"
 echo "[2].Renew Cert"
-echo "[3].Dns pointing fix"
+echo "[3].Free domain DNS"
 echo "[4].limit speed"
 echo "[5].speedtest"
 echo "[6].kill all proces"

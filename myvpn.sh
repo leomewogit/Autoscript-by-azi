@@ -76,6 +76,7 @@ apt dist-upgrade -y
 clear
 clear && clear && clear
 clear;clear;clear
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "memeriksa vps anda"
@@ -98,6 +99,7 @@ else
 echo "Akses di tolak!! Benget sia hurung!!";
 exit 0
 fi
+
 read -p "Input Your Domain : " domain
 if [[ $domain == "" ]]; then
 clear

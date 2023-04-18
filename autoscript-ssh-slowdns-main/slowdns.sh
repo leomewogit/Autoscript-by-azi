@@ -44,7 +44,7 @@ service cron restart
 
 #tambahan port openssh
 cd
-echo "Port 2222" >> /etc/ssh/sshd_config
+echo "Port 22" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
 service ssh restart

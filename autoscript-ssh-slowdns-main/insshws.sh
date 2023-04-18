@@ -9,6 +9,7 @@ wget -O /usr/local/bin/openssh https://raw.githubusercontent.com/Azigaming404/Au
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-ovpn
+chmod +x /usr/local/bin/openssh
 
 wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/WEBSOCKET/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/WEBSOCKET/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service

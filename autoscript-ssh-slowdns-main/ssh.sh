@@ -1,4 +1,4 @@
-#!/bin/bash
+Ini#!/bin/bash
 #date january 2022
 # created bye hidessh.com
 # Simple
@@ -120,7 +120,15 @@ wget -O /etc/nginx/nginx.conf "https://gitlab.com/hidessh/baru/-/raw/main/nginx.
 mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://gitlab.com/hidessh/baru/-/raw/main/vps.conf"
 /etc/init.d/nginx restart
-
+mkdir /etc/systemd/system/nginx.service.d
+printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+rm /etc/nginx/conf.d/default.conf
+systemctl daemon-reload
+service nginx restart
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/multiport"
+wget -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/.htaccess"
+mkdir /home/vps/public_html/ss-ws
+mkdir /home/vps/public_html/clash-ws
 # setting port ssh
 sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
 sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config

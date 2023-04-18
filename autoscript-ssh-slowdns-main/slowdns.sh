@@ -18,7 +18,7 @@ rm nsdomain
 #input nameserver manual to cloudflare
 
 read -rp "Masukkan Subdomain: " -e sub
-NS_DOMAIN=${SUB_DOMAIN}
+NS_DOMAIN=${sub}
 echo $NS_DOMAIN > /usr/sbin/potatonc/slowdns/nameserver
 
 nameserver=$(cat /usr/sbin/potatonc/slowdns/nameserver)

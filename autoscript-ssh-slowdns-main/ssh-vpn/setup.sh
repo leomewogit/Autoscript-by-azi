@@ -36,7 +36,7 @@ echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"

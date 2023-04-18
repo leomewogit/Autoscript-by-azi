@@ -25,3 +25,7 @@ systemctl restart ws-stunnel.service
 systemctl enable ws-ovpn.service
 systemctl start ws-ovpn.service
 systemctl restart ws-ovpn.service
+systemctl daemon-reload
+systemctl enable edu-proxy.service
+systemctl start edu-proxy.service
+systemctl restart edu-proxy.service

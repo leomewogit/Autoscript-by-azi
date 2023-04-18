@@ -1,4 +1,5 @@
 #!/bin/bash
+worryfree=$((RANDOM + 10000))
 trojanws=$((RANDOM + 10000))
 ssws=$((RANDOM + 10000))
 ssgrpc=$((RANDOM + 10000))

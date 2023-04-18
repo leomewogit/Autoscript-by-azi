@@ -2,7 +2,7 @@
 
 cd
 
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/WEBSOCKET/dropbear-ws.py
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/WEBSOCKET/ws-stunnel
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/OPENVPN/ws-ovpn.py
 

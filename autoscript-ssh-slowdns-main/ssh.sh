@@ -122,6 +122,19 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Azigaming4
 /etc/init.d/nginx restart
 
 
+mkdir /etc/systemd/system/nginx.service.d
+printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+rm /etc/nginx/conf.d/default.conf
+systemctl daemon-reload
+service nginx restart
+cd
+mkdir /home/vps
+mkdir /home/vps/public_html
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/multiport"
+wget -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/.htaccess"
+mkdir /home/vps/public_html/ss-ws
+mkdir /home/vps/public_html/clash-ws
+
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear

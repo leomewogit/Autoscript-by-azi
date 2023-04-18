@@ -29,7 +29,7 @@ echo -e "${tyblue}|          PROCESS INSTALLED XRAY          |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/FILE/XRAY/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Install SSH Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"

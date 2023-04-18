@@ -5,7 +5,7 @@ cd
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ws-stunnel
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/OPENVPN/ws-ovpn.py
-
+wget -O /usr/local/bin/openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/openssh-socket.py
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-ovpn

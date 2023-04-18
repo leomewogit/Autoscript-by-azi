@@ -80,8 +80,8 @@ elif [[ -e /etc/centos-release ]]; then
 	OS=centos
 fi
 
-echo "janggut"
-echo "Progress..."
+echo "kanyut installer"
+echo "Progress lur!!..."
 sleep 2
 
 /etc/init.d/vnstat restart >/dev/null 2>&1

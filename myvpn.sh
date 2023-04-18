@@ -140,7 +140,7 @@ chmod +x /root/.acme.sh/acme.sh
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 echo -e "${OKEY} Your Domain : $domain"
 sleep 2
-wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/setup.sh && chmod +x setup.sh && ./setup.sh
+wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh-vpn/setup.sh && chmod +x setup.sh && ./setup.sh
 sleep 1
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/ins-xray.sh
 sleep 1

@@ -98,8 +98,8 @@ cat > /etc/xray/config.json << END
      },
     {
       "listen": "127.0.0.1",
-      "port": "$trojanws",
-      "protocol": "trojan",
+      "port": "$worryfree",
+      "protocol": "vmess",
       "settings": {
           "decryption":"none",		
            "clients": [

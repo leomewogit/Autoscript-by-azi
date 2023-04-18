@@ -356,7 +356,7 @@ clear
 #installer OPH
 wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #installer openvpn
-wget https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/OPENVPN/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 #remove file 
 cd
 rm -rf hideinstall-websocket.sh

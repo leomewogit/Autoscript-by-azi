@@ -144,7 +144,7 @@ wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by
 sleep 1
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
-wget -q -O janggut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/janggut.sh && chmod +x janggut.sh && ./janggut.sh
+wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1

@@ -44,17 +44,4 @@ echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/FILE/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-#Install AutoBackup
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|          PROCESS INSTALLED AUTO BACKUP           |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
-clear
-wget https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#Download Extra Menu
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
-wget https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/FILE/MENU/update.sh && chmod +x update.sh && ./update.sh
 clear

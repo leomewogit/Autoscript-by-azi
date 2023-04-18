@@ -18,10 +18,10 @@ rm nsdomain
 #input nameserver manual to cloudflare
 
 read -rp "Masukkan Subdomain: " -e sub
-NS_DOMAIN=slowdns-${SUB_DOMAIN}
-echo $NS_DOMAIN > /root/nsdomain
+NS_DOMAIN=${SUB_DOMAIN}
+echo $NS_DOMAIN > /usr/sbin/potatonc/slowdns/nameserver
 
-nameserver=$(cat /root/nsdomain)
+nameserver=$(cat /usr/sbin/potatonc/slowdns/nameserver)
 apt update -y
 apt install -y python3 python3-dnslib net-tools
 apt install ncurses-utils -y

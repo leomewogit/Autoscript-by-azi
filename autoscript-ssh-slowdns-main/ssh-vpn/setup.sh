@@ -102,49 +102,6 @@ wget -q https://raw.githubusercontent.com/Teamkita/sshxrayv3/main/FILE/dependenc
 rm dependencies.sh
 clear
 
-yellow "Add Your Domain"
-echo " "
-read -rp "Input your domain : " -e pp
-echo "$pp" > /root/domain
-echo "$pp" > /root/scdomain
-echo "$pp" > /etc/xray/domain
-echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/alexxa-pro/ipvps.conf
-
-#THEME RED
-cat <<EOF>> /etc/alexxa/theme/red
-BG : \E[40;1;41m
-TEXT : \033[0;31m
-EOF
-#THEME BLUE
-cat <<EOF>> /etc/alexxa/theme/blue
-BG : \E[40;1;44m
-TEXT : \033[0;34m
-EOF
-#THEME GREEN
-cat <<EOF>> /etc/alexxa/theme/green
-BG : \E[40;1;42m
-TEXT : \033[0;32m
-EOF
-#THEME YELLOW
-cat <<EOF>> /etc/alexxa/theme/yellow
-BG : \E[40;1;43m
-TEXT : \033[0;33m
-EOF
-#THEME MAGENTA
-cat <<EOF>> /etc/alexxa/theme/magenta
-BG : \E[40;1;43m
-TEXT : \033[0;33m
-EOF
-#THEME CYAN
-cat <<EOF>> /etc/alexxa/theme/cyan
-BG : \E[40;1;46m
-TEXT : \033[0;36m
-EOF
-#THEME CONFIG
-cat <<EOF>> /etc/alexxa/theme/color.conf
-blue
-EOF
     
 #install ssh ovpn
 echo -e "${tyblue}.------------------------------------------.${NC}"

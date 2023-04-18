@@ -130,7 +130,7 @@ service nginx restart
 cd
 mkdir /home/vps
 mkdir /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/multiport"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh-vpn/multiport"
 wget -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/sreyaeve/sshxrayv3/main/FILE/SSH/.htaccess"
 mkdir /home/vps/public_html/ss-ws
 mkdir /home/vps/public_html/clash-ws

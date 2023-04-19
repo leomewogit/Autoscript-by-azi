@@ -135,7 +135,7 @@ wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/Agunxzzz/Min
 chmod +x /etc/xray/config.json
 sleep 1 
 rm -f /etc/nginx/conf.d/xray.conf
-wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/xray.conf"
+wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/conf/xray.conf"
 chmod +x /etc/nginx/conf.d/xray.conf
 
 # Installing Xray Service

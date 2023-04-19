@@ -126,19 +126,17 @@ install_ssl(){
 }
 
 # install nginx
-apt install -y nginx
-cd
-rm -fr /etc/nginx/sites-enabled/default
-rm -fr /etc/nginx/sites-available/default
-wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/conf/nginx.conf" 
 mkdir -p /home/vps/public_html
 wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/vps.conf.txt"
-
-
-wget -q -O xraymode.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/Xray%20mode/xraymode.sh && chmod +x xraymode.sh && ./xraymode.sh
-sleep 1 
-wget -q -O xray.conf https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/xray.conf.txt && chmod +x xray.conf && ./xray.conf
 sleep 1
+wget -q -O xraymode.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/xraymode.sh && chmod +x xraymode.sh && ./xraymode.sh
+sleep 1 
+wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/config.json"
+chmod +x /etc/xray/config.json
+sleep 1 
+rm -f /etc/nginx/conf.d/xray.conf
+wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/xray.conf"
+chmod +x /etc/nginx/conf.d/xray.conf
 
 # Installing Xray Service
 rm -fr /etc/systemd/system/xray.service.d

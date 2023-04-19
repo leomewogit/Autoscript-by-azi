@@ -142,21 +142,6 @@ echo -e "${OKEY} Your Domain : $domain"
 sleep 2
 wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/setup.sh && chmod +x setup.sh && ./setup.sh
 sleep 1
-apt install -y nginx
-cd
-rm -fr /etc/nginx/sites-enabled/default
-rm -fr /etc/nginx/sites-available/default
-wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/nginx.conf.txt" 
-mkdir -p /home/vps/public_html
-wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/vps.conf.txt"
-
-wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/config.json"
-chmod +x /etc/xray/config.json
-sleep 1 
-rm -f /etc/nginx/conf.d/xray.conf
-wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/xray.conf"
-chmod +x /etc/nginx/conf.d/xray.conf
-sleep 1
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh

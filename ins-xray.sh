@@ -125,6 +125,16 @@ install_ssl(){
     fi
 }
 
+# install nginx
+apt install -y nginx
+cd
+rm -fr /etc/nginx/sites-enabled/default
+rm -fr /etc/nginx/sites-available/default
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/nginx.conf.txt" 
+mkdir -p /home/vps/public_html
+wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/vps.conf.txt"
+
+
 wget -q -O xraymode.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/Xray%20mode/xraymode.sh && chmod +x xraymode.sh && ./xraymode.sh
 sleep 1 
 wget -q -O xray.conf https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/xray.conf.txt && chmod +x xray.conf && ./xray.conf

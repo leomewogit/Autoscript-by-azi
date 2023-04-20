@@ -133,16 +133,7 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Azigaming4
 apt install stunnel4 -y
 #certi stunnel
 #wget -O /etc/stunnel/hidessh.pem https://gitlab.com/hidessh/baru/-/raw/main/certi/stunel && chmod +x /etc/stunnel/hidessh.pem
-#installer SSL Cloudflare 
-cd
 
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.crt
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.key
-#buat directory
-mkdir /etc/hidessh
-chmod +x /etc/hidessh
-
-cat hidesvr.key hidesvr.crt >> /etc/hidessh/stunnel.pem
 
 #konfigurasi stunnel4
 cat > /etc/stunnel/stunnel.conf <<-END

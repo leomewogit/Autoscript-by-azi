@@ -130,45 +130,6 @@ mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/vps.conf.txt"
 /etc/init.d/nginx restart
 
-apt install stunnel4 -y
-#certi stunnel
-#wget -O /etc/stunnel/hidessh.pem https://gitlab.com/hidessh/baru/-/raw/main/certi/stunel && chmod +x /etc/stunnel/hidessh.pem
-
-
-#konfigurasi stunnel4
-cat > /etc/stunnel/stunnel.conf <<-END
-cert = /etc/hidessh/stunnel.pem
-client = no
-socket = a:SO_REUSEADDR=1
-socket = l:TCP_NODELAY=1
-socket = r:TCP_NODELAY=1
-[dropbear]
-accept = 222
-connect = 127.0.0.1:22
-[dropbear]
-accept = 444
-connect = 127.0.0.1:300
-[dropbear]
-accept = 777
-connect = 127.0.0.1:77
-[openvpn]
-accept = 442
-connect = 127.0.0.1:1194
-[slws]
-accept = 8443
-connect = 127.0.0.1:443
-END
-
-# make a certificate
-openssl genrsa -out key.pem 2048
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
-
-# konfigurasi stunnel
-sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-/etc/init.d/stunnel4 restart
-
 # install squid
 #cd
 apt -y install squid3

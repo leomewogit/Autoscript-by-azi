@@ -24,14 +24,7 @@ echo "Progress..."
 echo "Sedang berlangsung..."
 sleep 1
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh.sh && chmod +x ssh.sh && ./ssh.sh
-echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
-sleep 1
-echo "Progress..."
-echo "Sedang berlangsung..."
-sleep 3
-wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
-
-echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
+echo -e "[ ${green}INFO${NC} ] DONE... Tunggu"
 sleep 1
 echo "Progress..."
 echo "Sedang berlangsung..."

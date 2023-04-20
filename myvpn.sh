@@ -140,17 +140,13 @@ chmod +x /root/.acme.sh/acme.sh
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 echo -e "${OKEY} Your Domain : $domain"
 sleep 2
-echo "install xray lurd...!!!" | lolcat
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-sleep 1
-wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh
-sleep 1
 echo "install ssh lurd..!!" | lolcat
 wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/setup.sh && chmod +x setup.sh && ./setup.sh
 sleep 1
-rm -f /root/ins-xray.sh
+echo "install xray lurd...!!!" | lolcat
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/ins-xray.sh
+wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1

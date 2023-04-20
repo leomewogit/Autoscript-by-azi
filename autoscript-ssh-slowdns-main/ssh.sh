@@ -348,7 +348,7 @@ apt autoremove -y
 
 
 #instalasi Websocket
-wget https://raw.githubusercontent.com/Azigaming404/websocket/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 
 # finihsing
 clear

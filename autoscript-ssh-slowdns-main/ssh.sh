@@ -125,7 +125,7 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Alamyazid/AutoScriptSSH/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/conf/nginx.conf"
 mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/vps.conf.txt"
 /etc/init.d/nginx restart

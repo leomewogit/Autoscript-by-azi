@@ -19,13 +19,13 @@ clear
 #port 69 ( Dropbear) to 80 (HTTPS Websocket)
 cd
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/dropbear-ws.py.txt && chmod +x /usr/local/bin/ws-dropbear
-wget -O /etc/systemd/system/ws-dropbear.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.service && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/service-wsdropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/service-wsdropbear.txt && chmod +x /etc/systemd/system/service-wsdropbear
 
 #reboot service
 systemctl daemon-reload
-systemctl enable ws-dropbear.service
-systemctl start ws-dropbear.service
-systemctl restart ws-dropbear.service
+systemctl enable service-wsdropbear
+systemctl start service-wsdropbear
+systemctl restart service-wsdropbear
 clear
 
 # OpenVPN WebSocket

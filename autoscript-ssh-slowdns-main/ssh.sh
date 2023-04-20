@@ -169,7 +169,7 @@ accept = 442
 connect = 127.0.0.1:1194
 
 [slws]
-accept = 8443
+accept = 443
 connect = 127.0.0.1:443
 
 END
@@ -178,19 +178,11 @@ END
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
 -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+cat key.pem cert.pem >> /etc/xray/xray.crt
 
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
-
-cd
-#install sslh
-apt-get install sslh -y
-#konfigurasi
-#port 333 to 44 and 777
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/sslh.conf"
-service sslh restart
 
 
 # install squid

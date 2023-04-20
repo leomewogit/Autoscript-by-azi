@@ -7,12 +7,12 @@ clear
 #port 88 (OpenSSH) to 2082 (HTTP Websocket)
 cd
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/openssh-socket.py.txt && chmod +x /usr/local/bin/ws-openssh
-wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+wget -O /etc/systemd/system/service-wsopenssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/edu-proxy.service
 #reboot service
 systemctl daemon-reload
-systemctl enable edu-proxy.service
-systemctl start edu-proxy.service
-systemctl restart edu-proxy.service
+systemctl enable service-wsopenssh
+systemctl start service-wsopenssh
+systemctl restart service-wsopenssh
 clear
 
 # Dropbear WebSocket

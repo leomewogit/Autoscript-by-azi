@@ -42,19 +42,19 @@ clear
 
 # SSL/TLS WebSocket
 #port 1194 ( Dropbear) to 2086 (HTTP Websocket)
-wget -O /usr/local/bin/edu-tls https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.txt && chmod +x /usr/local/bin/edu-tls
-wget -O /etc/systemd/system/edu-tls.service https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/edu-tls.service
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.txt && chmod +x /usr/local/bin/ws-stunnel
+wget -O /etc/systemd/system/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel
 #reboot service
 systemctl daemon-reload
-systemctl enable edu-tls
-systemctl start edu-tls
-systemctl restart edu-tls
+systemctl enable ws-stunnel
+systemctl start ws-stunnel
+systemctl restart ws-stunnel
 clear
 
 cd
-wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Azigaming404/websocket/main/ws-tls && chmod +x /usr/local/bin/ws-tls
-wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && chmod +x  /etc/systemd/system/ws-tls.service
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.txt && chmod +x /usr/local/bin/ws-stunnel
+wget -O /etc/systemd/system/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel
 
 systemctl daemon-reload
-systemctl enable ws-tls
-systemctl restart ws-tls
+systemctl enable ws-stunnel
+systemctl restart ws-stunnel

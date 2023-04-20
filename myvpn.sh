@@ -144,7 +144,7 @@ echo "install ssh lurd..!!" | lolcat
 wget -q -O setup.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/setup.sh && chmod +x setup.sh && ./setup.sh
 sleep 1
 echo "install xray lurd...!!!" | lolcat
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh
 sleep 1

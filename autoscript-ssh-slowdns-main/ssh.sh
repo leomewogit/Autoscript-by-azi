@@ -140,10 +140,7 @@ cd
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.crt
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.key
 #buat directory
-mkdir /etc/hidessh
-chmod +x /etc/hidessh
-
-cat hidesvr.key hidesvr.crt >> /etc/hidessh/stunnel.pem
+cat hidesvr.key hidesvr.crt >> /etc/xray/xray.crt
 
 #konfigurasi stunnel4
 cat > /etc/stunnel/stunnel.conf <<-END

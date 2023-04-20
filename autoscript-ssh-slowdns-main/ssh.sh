@@ -130,60 +130,53 @@ mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/vps.conf.txt"
 /etc/init.d/nginx restart
 
-# install stunnel
 apt install stunnel4 -y
 #certi stunnel
 #wget -O /etc/stunnel/hidessh.pem https://gitlab.com/hidessh/baru/-/raw/main/certi/stunel && chmod +x /etc/stunnel/hidessh.pem
 #installer SSL Cloudflare 
-rm -fr /root/.acme.sh
-mkdir -p /root/.acme.sh
-curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
-chmod +x /root/.acme.sh/acme.sh
-/root/.acme.sh/acme.sh --upgrade
-/root/.acme.sh/acme.sh --upgrade --auto-upgrade
-/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+cd
+
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.crt
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.key
+#buat directory
+mkdir /etc/hidessh
+chmod +x /etc/hidessh
+
+cat hidesvr.key hidesvr.crt >> /etc/hidessh/stunnel.pem
+
 #konfigurasi stunnel4
 cat > /etc/stunnel/stunnel.conf <<-END
-cert = /etc/xray/xray.crt
+cert = /etc/hidessh/stunnel.pem
 client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
-
 [dropbear]
 accept = 222
 connect = 127.0.0.1:22
-
 [dropbear]
 accept = 444
 connect = 127.0.0.1:300
-
 [dropbear]
 accept = 777
 connect = 127.0.0.1:77
-
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
-
 [slws]
-accept = 443
+accept = 8443
 connect = 127.0.0.1:443
-
 END
 
 # make a certificate
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
 -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/xray/xray.crt
+cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
-
 
 # install squid
 #cd

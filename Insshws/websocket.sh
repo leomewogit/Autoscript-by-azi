@@ -7,7 +7,7 @@ clear
 #port 88 (OpenSSH) to 2082 (HTTP Websocket)
 cd
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/openssh-socket.py.txt && chmod +x /usr/local/bin/ws-openssh
-wget -O /etc/systemd/system/service-wsopenssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/edu-proxy.service
+wget -O /etc/systemd/system/service-wsopenssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/service-wsopenssh
 #reboot service
 systemctl daemon-reload
 systemctl enable service-wsopenssh

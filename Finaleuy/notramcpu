@@ -1,7 +1,7 @@
 #!/bin/bash
 domain=$(cat /etc/xray/domain)
-token=5922026926:AAE5t2CXnOOT57zWdua2wfHKKG9URGEQdP0
-chatid=1106186898
+token=6226368145:AAGaFLgpYKcH7JppfHptqyWowndyO_IENEU
+chatid=5764457448
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
 tomem="$(free | awk '{print $2}' | head -2 | tail -n 1 )"
 usmem="$(free | awk '{print $3}' | head -2 | tail -n 1 )"

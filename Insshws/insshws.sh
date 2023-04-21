@@ -27,7 +27,7 @@ wget -O /etc/systemd/system/ws-dropbear.service https://github.com/andristji/Xra
 wget -O /etc/systemd/system/ws-stunnel.service https://github.com/andristji/Xray-SSH/main/insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
-#wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
+wget -O /etc/systemd/system/edu-proxyovpn.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.service && chmod +x /etc/systemd/system/edu-proxyovpn.service
 
 #restart service
 #

@@ -91,7 +91,7 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sleep 2
-
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install Websocket              $NC"

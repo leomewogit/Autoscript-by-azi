@@ -2,7 +2,7 @@
 # =========================================
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
-# Auther  : Adit Ardiansyah
+# Auther  : Aji permana
 # (C) Copyright 2022
 # =========================================
 # // Export Color & Information
@@ -135,7 +135,7 @@ wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/Azigaming404
 chmod +x /etc/xray/config.json
 sleep 1 
 rm -f /etc/nginx/conf.d/xray.conf
-wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/xray.conf"
+wget -q -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/configuration/xray.conf"
 chmod +x /etc/nginx/conf.d/xray.conf
 
 # Installing Xray Service

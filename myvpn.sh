@@ -205,7 +205,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Nyolong By Themoon ]-==============="
+echo "===============-[ Script Credit By AZI 😀 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt

@@ -118,7 +118,7 @@ rm -f /root/insshws.sh
 rm -f /root/xraymode.sh
 
 #xray
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 wget -q -O slow.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/slow.sh && chmod +x slow.sh && ./slow.sh

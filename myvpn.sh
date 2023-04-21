@@ -101,7 +101,7 @@ wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Inssh
 
 #exp
 cd /usr/bin
-wget -O xp "https://raw.githubusercontent.com/andristji/Xray-SSH/main/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/xp.sh"
 chmod +x xp
 sleep 1
 wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/Lain/notramcpu" && chmod +x /usr/bin/notramcpu

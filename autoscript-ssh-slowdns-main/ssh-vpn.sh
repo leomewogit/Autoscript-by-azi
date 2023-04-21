@@ -353,6 +353,13 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
+# finihsing
+clear
+
+#installer OPH
+wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+#installer openvpn
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 
 rm -f /root/key.pem

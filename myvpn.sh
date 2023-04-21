@@ -31,6 +31,28 @@ apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "memeriksa vps anda"
+sleep 0.5
+CEKEXPIRED () {
+        today=$(date -d +1day +%Y -%m -%d)
+        Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
+        if [[ $today < $Exp1 ]]; then
+        echo "status script aktif.."
+        else
+        echo "SCRIPT ANDA EXPIRED";
+        exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo "IZIN DI TERIMA!!"
+CEKEXPIRED
+else
+echo "Akses di tolak!! Benget sia hurung!!";
+exit 0
+fi
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf

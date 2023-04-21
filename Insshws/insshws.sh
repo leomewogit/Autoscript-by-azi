@@ -8,13 +8,13 @@ apt install python -y
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/openssh-socket.py.txt
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/dropbear-ws.py.txt
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.txt
-#wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/${GitUser}/test1/${namafolder}/main/ws-ovpn && chmod +x /usr/local/bin/ws-ovpn
+wget -O /usr/local/bin/edu-proxyovpn https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
 
 #izin permision
 #chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
-#chmod +x /usr/local/bin/ws-ovpn
+chmod +x /usr/local/bin/edu-proxyovpn
 
 
 #System OpenSSH Websocket-SSH Python

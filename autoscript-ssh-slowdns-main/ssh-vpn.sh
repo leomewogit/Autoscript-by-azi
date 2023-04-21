@@ -129,7 +129,7 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/nginx.conf.txt"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 

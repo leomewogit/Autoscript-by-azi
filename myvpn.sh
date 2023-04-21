@@ -90,9 +90,6 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sleep 2
-clear
-wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
-
 
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -121,7 +118,7 @@ rm -f /root/xraymode.sh
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
-wget -q -O slow.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O kanyut.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/kanyut.sh && chmod +x kanyut.sh && ./kanyut.sh
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

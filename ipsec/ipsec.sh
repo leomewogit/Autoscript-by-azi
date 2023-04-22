@@ -305,7 +305,7 @@ service xl2tpd restart 2>/dev/null
 wget -O /usr/bin/addl2tp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/addl2tp.sh && chmod +x /usr/bin/addl2tp
 wget -O /usr/bin/dell2tp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/dell2tp.sh && chmod +x /usr/bin/dell2tp
 wget -O /usr/bin/addpptp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp https://${akbarvpn}/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/delpptp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/delpptp.sh && chmod +x /usr/bin/delpptp
 wget -O /usr/bin/renewpptp https://${akbarvpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
 wget -O /usr/bin/renewl2tp https://${akbarvpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
 touch /var/lib/crot/data-user-l2tp

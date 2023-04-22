@@ -135,7 +135,12 @@ mkdir /root/akun/vless
 mkdir /root/akun/shadowsocks
 mkdir /root/akun/trojan
 
-
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install IPSEC L2TP & SSTP               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 1
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/ipsec.sh
+bash ipsec.sh
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab

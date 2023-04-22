@@ -131,7 +131,7 @@ wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Agunxzz
 sleep 1
 wget -q -O xraymode.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/xraymode.sh && chmod +x xraymode.sh && ./xraymode.sh
 sleep 1 
-wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/andristji/Xray-SSH/main/conf/config.json"
+wget -q -O /etc/xray/config.json "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/configuration/config.json"
 chmod +x /etc/xray/config.json
 sleep 1 
 rm -f /etc/nginx/conf.d/xray.conf

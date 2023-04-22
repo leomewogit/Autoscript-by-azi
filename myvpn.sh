@@ -119,6 +119,8 @@ rm -f /root/xraymode.sh
 wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
+sleep 1
+wget -q -O slow.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slow.sh && chmod +x slow.sh && ./slow.sh
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

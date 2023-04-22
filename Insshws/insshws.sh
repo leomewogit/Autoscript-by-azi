@@ -21,7 +21,7 @@ chmod +x /usr/local/bin/edu-proxyovpn
 #wget -O /etc/systemd/system/ws-openssh.service https://github.com/andristji/Xray-SSH/main/insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service https://github.com/andristji/Xray-SSH/main/insshws/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://github.com/andristji/Xray-SSH/main/insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel.service

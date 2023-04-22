@@ -5,7 +5,7 @@ cd
 apt install python -y
 
 #Install Script Websocket-SSH Python
-wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/openssh-socket.py.txt
+#wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/openssh-socket.py.txt
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/dropbear-ws.py.txt
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/ws-stunnel.txt
 wget -O /usr/local/bin/edu-proxyovpn https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
@@ -18,7 +18,7 @@ chmod +x /usr/local/bin/edu-proxyovpn
 
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/ws-openssh.service https://github.com/andristji/Xray-SSH/main/insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/ws-openssh.service
+#wget -O /etc/systemd/system/ws-openssh.service https://github.com/andristji/Xray-SSH/main/insshws/service-wsopenssh.txt && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-dropbear.service https://github.com/andristji/Xray-SSH/main/insshws/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
@@ -34,7 +34,7 @@ wget -O /etc/systemd/system/edu-proxyovpn.service https://gitlab.com/hidessh/bar
 systemctl daemon-reload
 
 #Enable & Start & Restart ws-openssh service
-systemctl enable ws-openssh.service
+#systemctl enable ws-openssh.service
 systemctl start ws-openssh.service
 systemctl restart ws-openssh.service
 

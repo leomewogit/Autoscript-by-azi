@@ -78,6 +78,9 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP2
 fi
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                Create PPTP                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
 		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/crot/data-user-pptp | wc -l)

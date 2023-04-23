@@ -224,7 +224,7 @@ echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "${CYAN}                   ⇱ CYBER VPN ⇲                 ${NC}"
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
-echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH${NC}         ${GREEN}[06]${NC} • ${COLOR1}BACKUP${NC}"
+echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH${NC}         ${GREEN}[06]${NC} • ${COLOR1}MENU L2TP & PPTP [ IPSEC ]${NC}"
 echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[07]${NC} • ${COLOR1}INFO RUNNING${NC}"          
 echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[08]${NC} • ${COLOR1}TEMA VPS${NC}"  
 echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • ${COLOR1}SETTINGS${NC}"
@@ -243,7 +243,7 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-backup ;;
+06 | 6) clear ; menu-ipsec ;;
 07 | 7) clear ; running ;;
 08 | 8) clear ;  bash thema.sh ;;
 09 | 9) clear ; setting ;;

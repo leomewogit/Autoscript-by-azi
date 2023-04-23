@@ -44,6 +44,7 @@ wget -q -O /usr/bin/updatsc "https://raw.githubusercontent.com/Azigaming404/Auto
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-backup.sh"
 wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/cf.sh"
 wget -q -O /usr/bin/setting "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/setting.sh"
+wget -q -O /usr/bin/menu-ipsec "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/menu-ipsec.sh"
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/wslow.sh
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/backup/set-br.sh
 bash set-br.sh
@@ -86,5 +87,6 @@ chmod +x /usr/bin/xp
 chmod +x /usr/bin/changer
 chmod +x /usr/bin/fix
 chmod +x /usr/bin/setting
+chmod +x /usr/bin/menu-ipsec
 #chmod +x /usr/bin/update
 rm -rf set-br.sh

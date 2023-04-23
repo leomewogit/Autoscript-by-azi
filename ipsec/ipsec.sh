@@ -309,7 +309,9 @@ wget -O /usr/bin/delpptp https://raw.githubusercontent.com/Azigaming404/Autoscri
 wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/renewpptp.sh && chmod +x /usr/bin/renewpptp
 wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
 wget /var/lib/crot/data-user-l2tp "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/l2tp-user.sh"
-wget /var/lib/crot/data-user-pptp
+wget /var/lib/crot/data-user-pptp "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/pptp-user"
+chmod +x /var/lib/crot/data-user-l2tp
+chmod +x /var/lib/crot/data-user-pptp
 touch /var/lib/crot/data-user-l2tp
 touch /var/lib/crot/data-user-pptp
 rm -f /root/ipsec.sh

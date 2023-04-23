@@ -218,7 +218,7 @@ echo -e "${ungu}┌────────────────────�
 echo -e "${ungu}│\033[0m ${BOLD}${YELLOW}              SSH user  XRAY user"
 echo -e "${ungu}│\033[0m ${Blue}                   $ssh1      $vmc     $NC"
 echo -e "${ungu}└───────────────────────────────────────────────┘${NC}"
-echo -e "${CYAN}                      🦝V.3.0.0 LTS🦝"
+echo -e "${CYAN}                  🦝V.3.0.0 LTS🦝"
 echo -e ""
 echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${CYAN}                   ⇱ CYBER VPN ⇲                 ${NC}"

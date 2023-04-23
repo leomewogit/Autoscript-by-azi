@@ -82,7 +82,7 @@ echo -e "\E[44;1;39m                Create L2TP                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/crot/l2tp-user.sh | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/crot/l2tp-user | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -111,9 +111,9 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/crot/data-user-l2tp"
 cat <<EOF
 
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                AKUN L2TP PREMIUM                    \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "${GREEN}                AKUN L2TP PREMIUM                     "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "${LIGHT}
 IP/Host    : $PUBLIC_IP
 Domain     : $domain

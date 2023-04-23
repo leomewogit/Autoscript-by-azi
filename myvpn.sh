@@ -87,7 +87,7 @@ echo "$nsdomen" > /root/nsdomain
 clear
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH / WS               $NC"
+echo -e "$green      Install SSH WS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
@@ -136,13 +136,21 @@ mkdir /root/akun/vmess
 mkdir /root/akun/vless
 mkdir /root/akun/shadowsocks
 mkdir /root/akun/trojan
-
+clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install IPSEC L2TP & SSTP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/ipsec.sh
 bash ipsec.sh
+clear
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install OPEN VPN               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 1
+
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab
@@ -184,7 +192,6 @@ echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22, 53, 2222, 2269"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo "   - Stunnel5                : 222, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
@@ -208,6 +215,8 @@ echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-instal
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - IPSEC                   : [ON]"  | tee -a log-install.txt
+echo "   - VNSTAT                  : [ON]"  | tee -a log-install.txt
 echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt

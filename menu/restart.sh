@@ -87,5 +87,5 @@ echo -e "${LIGHT}"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${YELLOW}                Terimakasih sudah menggunakan          {NC}"
-echo -e "                    Script Premium CyberVPN
+echo -e "                    Script Premium CyberVPN"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"

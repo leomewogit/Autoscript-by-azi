@@ -81,8 +81,7 @@ echo "[15].Cek semua port"
 echo "[16].Slowdns setting"
 echo "[17].Menu Backup"
 echo "[18].About"
-echo -e "${BlueCyan}"
-echo "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p    "Pilih Nomor :" bro
 
 

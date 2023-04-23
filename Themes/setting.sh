@@ -58,9 +58,9 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
-echo -e "${BlueCyan}==================================================${NC}"
-echo -e "${yellow}                     menu settings"
-echo -e "${BlueCyan}__________________________________________________${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m            ⇱ MENU SETTING ⇲                 \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${WhiteB}"
 echo
 echo "[1].Add Host"
@@ -79,9 +79,10 @@ echo "[13].restart all service"
 echo "[14].WEBMIN"
 echo "[15].Cek semua port"
 echo "[16].Slowdns setting"
-echo "[17].About"
+echo "[17].Menu Backup"
+echo "[18].About"
 echo -e "${BlueCyan}"
-echo "__________________________________________________________"
+echo "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p    "Pilih Nomor :" bro
 
 
@@ -168,8 +169,11 @@ then
 clear
 bash wslow.sh
 fi
-
 if [ $bro = 17 ] || [ $bro = 17 ]
+then
+menu-backup
+fi
+if [ $bro = 18 ] || [ $bro = 18 ]
 then
 clear
 neofetch

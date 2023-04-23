@@ -113,6 +113,8 @@ Username  : $VPN_USER
 Password  : $VPN_PASSWORD
 Created   : $hariini
 Expired   : $exp
-============================
-Script Mod By SL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           Terimakasih sudah menggunakan
+              SCRIPT PREMIUM CyberVPN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF

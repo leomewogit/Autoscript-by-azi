@@ -76,9 +76,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/crot/data-user-l2tp")
 	fi
 
 	echo ""
-	echo " Select the existing client you want to remove"
-	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                DELETE L2TP                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/crot/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do

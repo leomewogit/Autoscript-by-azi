@@ -78,6 +78,9 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP2
 fi
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                Create L2TP                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
 		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/crot/data-user-l2tp | wc -l)
@@ -109,9 +112,10 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/crot/data-user-l2tp"
 cat <<EOF
 
-============================
-L2TP/IPSEC PSK VPN
-============================
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                AKUN L2TP PREMIUM                    \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${LIGHT}
 IP/Host    : $PUBLIC_IP
 Domain     : $domain
 IPsec PSK  : azi
@@ -119,6 +123,8 @@ Username   : $VPN_USER
 Password   : $VPN_PASSWORD
 Created    : $hariini
 Expired    : $exp
-============================
-Script By CyberVPN
+echo -e "${ungu}============================"
+echo -e "${CYAN}Terimakasih sudah menggunakan
+echo -e "    SCRIPT PREMIUM CyberVPN"
+echo -e "${ungu}============================"
 EOF

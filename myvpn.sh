@@ -28,7 +28,9 @@ else
 echo "Akses di tolak!! Benget sia hurung!!";
 exit 0
 fi
-
+sudo apt install net-tools
+sudo apt install vnstat
+sudo apt install squid
 
 localip=$(hostname -I | cut -d\  -f1)
 hst=( `hostname` )

@@ -69,3 +69,19 @@ export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
+
+clear
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                RESTART ALL SERVICE               \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${LIGHT}"
+/etc/init.d/nginx restart
+/etc/init.d/dropbear restart
+/etc/init.d/ssh restart
+/etc/init.d/stunnel4 restart
+/etc/init.d/vnstat restart
+/etc/init.d/squid restart
+/etc/init.d/xray restart
+/etc/init.d/openvpn restart
+/etc/init.d/fail2ban restart
+

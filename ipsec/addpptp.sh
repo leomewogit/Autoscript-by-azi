@@ -104,9 +104,9 @@ chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $VPN_USER $exp">>"/var/lib/crot/data-user-pptp"
 cat <<EOF
 
-============================
-PPTP VPN
-============================
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                AKUN PPTP PREMIUM                     
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 IP/Host   : $PUBLIC_IP
 Domain    : $domain
 Username  : $VPN_USER

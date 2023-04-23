@@ -100,10 +100,12 @@ sed -i "/^### $VPN_USER $exp/d" /var/lib/crot/data-user-l2tp
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo ""
-echo "=========================="
-echo "   L2TP Account Deleted   "
-echo "=========================="
+echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "${CYAN}                L2TP DELETED!!!"
+echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Username  : $VPN_USER"
 echo "Expired   : $exp"
-echo "=========================="
-echo "Script Mod By SL"
+echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "${CYAN}          Terimakasih sudah menggunakan"
+echo -e "${CYAN}              SCRIPT PREMIUM CyberVPN"
+echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

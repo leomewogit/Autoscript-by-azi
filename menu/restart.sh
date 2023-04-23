@@ -85,3 +85,7 @@ echo -e "${LIGHT}"
 /etc/init.d/openvpn restart
 /etc/init.d/fail2ban restart
 
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${YELLOW}                Terimakasih sudah menggunakan          {NC}"
+echo -e "                    Script Premium CyberVPN
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"

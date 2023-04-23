@@ -126,10 +126,10 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/crot/data-user-l2tp"
 cat <<EOF
 
-echo -e "${Bluecyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "${GREEN}                AKUN L2TP PREMIUM                     "
-echo -e "${Bluecyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "${LIGHT}
+echo -e "$Bluecyan━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "$GREEN                AKUN L2TP PREMIUM                     "
+echo -e "$Bluecyan━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "$LIGHT
 IP/Host    : $PUBLIC_IP
 Domain     : $domain
 IPsec PSK  : azi
@@ -137,8 +137,8 @@ Username   : $VPN_USER
 Password   : $VPN_PASSWORD
 Created    : $hariini
 Expired    : $exp
-echo -e "${ungu}============================"
-echo -e "${Bluecyan}Terimakasih sudah menggunakan
+echo -e "$ungu============================"
+echo -e "$Bluecyan Terimakasih sudah menggunakan
 echo -e "    SCRIPT PREMIUM CyberVPN"
-echo -e "${ungu}============================"
+echo -e "$ungu============================"
 EOF

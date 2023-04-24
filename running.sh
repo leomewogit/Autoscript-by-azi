@@ -147,7 +147,7 @@ trgo="$(systemctl show trojan-go.service --no-page)"
 strgo=$(echo "${trgo}" | grep 'ActiveState=' | cut -f2 -d=)  
 #sswg=$(systemctl status wg-quick@wg0 | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#wsdrop=$(systemctl status ws-dropbear.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsdrop=$(systemctl status ws-dropbear.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #wsopen=$(systemctl status ws-openssh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -267,14 +267,14 @@ else
    status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
 fi
 # STATUS SERVICE WEBSOCKET TLS
-if [[ $dropbear_status == "running" ]]; then 
+if [[ $wstls == "running" ]]; then 
    shdroptls=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
    shdroptls="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
 # STATUS SERVICE WEBSOCKET DROPBEAR
-if [[ $dropbear_status == "running" ]]; then 
+if [[ $wsdrop == "running" ]]; then 
    shdrophttp=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
    dropbear_status="${RED}  Not Running ${NC}  ( Error )${NC}"

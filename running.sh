@@ -116,7 +116,7 @@ CITY=$( curl -s ipinfo.io/city )
 # CHEK STATUS 
 #openvpn_service="$(systemctl show openvpn.service --no-page)"
 #oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
-status_openvpn=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+status_openvpn=$(systemctl status openvpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #status_ss_tls="$(systemctl show shadowsocks-libev-server@tls.service --no-page)"
 #ss_tls=$(echo "${status_ss_tls}" | grep 'ActiveState=' | cut -f2 -d=)
 #sst_status=$(systemctl status shadowsocks-libev-server@tls | grep Active | awk '{print $0}' | cut -d "(" -f2 | cut -d ")" -f1) 

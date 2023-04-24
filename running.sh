@@ -116,7 +116,7 @@ CITY=$( curl -s ipinfo.io/city )
 # CHEK STATUS 
 #openvpn_service="$(systemctl show openvpn.service --no-page)"
 #oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
-#status_openvp=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+status_openvpn=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #status_ss_tls="$(systemctl show shadowsocks-libev-server@tls.service --no-page)"
 #ss_tls=$(echo "${status_ss_tls}" | grep 'ActiveState=' | cut -f2 -d=)
 #sst_status=$(systemctl status shadowsocks-libev-server@tls | grep Active | awk '{print $0}' | cut -d "(" -f2 | cut -d ")" -f1) 
@@ -134,7 +134,7 @@ vless_nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3
 trojan_server=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #trojangfw_server=$(systemctl status trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-stunnel_service=$(/etc/init.d/stunnel5 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 squid_service=$(systemctl status squid | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -337,7 +337,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ SSH / TUN / websocket   :$status_ssh"
-#echo -e "❇️ OpenVPN                 :$status_openvpn"
+echo -e "❇️ OpenVPN                 :$status_openvpn"
 echo -e "❇️ Dropbear                :$status_beruangjatuh"
 #echo -e "❇️ Stunnel4                :$status_stunnel"
 echo -e "❇️ Squid                   :$status_squid"

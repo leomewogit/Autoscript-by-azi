@@ -170,7 +170,7 @@ clear
 if [[ $status_openvpn == "active" ]]; then
   status_vpn=" ${GREEN}Running ${NC}( No Error )"
 else
-  status_openvpn="${RED}  Not Running ${NC}  ( Error )"
+  status_vpn="${RED}  Not Running ${NC}  ( Error )"
 fi
 
 # STATUS SERVICE  SSH 
@@ -267,17 +267,17 @@ else
    status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
 fi
 # STATUS SERVICE WEBSOCKET TLS
-if [[ $wstls == "running" ]]; then 
-   swstls=" ${GREEN}Running ${NC}( No Error )${NC}"
+if [[ $dropbear_status == "running" ]]; then 
+   dropbear_status=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
-   swstls="${RED}  Not Running ${NC}  ( Error )${NC}"
+   dropbear_status="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
 # STATUS SERVICE WEBSOCKET DROPBEAR
-if [[ $wsdrop == "running" ]]; then 
-   swsdrop=" ${GREEN}Running ${NC}( No Error )${NC}"
+if [[ $dropbear_status == "running" ]]; then 
+   dropbear_status=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
-   swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
+   dropbear_status="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
 # TOTAL RAM
@@ -351,6 +351,8 @@ echo -e "❇️ XRAYS Vless None TLS    :$status_nontls_vless"
 echo -e "❇️ XRAYS Trojan            :$status_virus_trojan"
 echo -e "❇️ Trojan GO               :$status_virus_trojan"
 #echo -e "❇️ Trojan GFW              :$status_virus_trojangfw"
+echo -e "❇️ Websocket TLS           :$status_beruangjatuh"
+echo -e "❇️ Websocket None TLS      :$status_beruangjatuh"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"

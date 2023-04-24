@@ -81,11 +81,11 @@ echo -e "${LIGHT}"
 /etc/init.d/stunnel4 restart
 /etc/init.d/vnstat restart
 /etc/init.d/squid restart
-/etc/init.d/xray restart
+systemctl restart xray
 /etc/init.d/openvpn restart
 /etc/init.d/fail2ban restart
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${YELLOW}                Terimakasih sudah menggunakan          {NC}"
-echo -e "                    Script Premium CyberVPN"
+echo -e "${YELLOW}          Terimakasih sudah menggunakan         "
+echo -e "                 Script Premium CyberVPN"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"

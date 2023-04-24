@@ -167,8 +167,8 @@ LIGHT='\033[0;37m'
 clear
 
 # STATUS SERVICE OPENVPN
-if [[ $oovpn == "active" ]]; then
-  status_openvpn=" ${GREEN}Running ${NC}( No Error )"
+if [[ $status_openvpn == "active" ]]; then
+  status_vpn=" ${GREEN}Running ${NC}( No Error )"
 else
   status_openvpn="${RED}  Not Running ${NC}  ( Error )"
 fi
@@ -337,9 +337,9 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ SSH / TUN / websocket   :$status_ssh"
-echo -e "❇️ OpenVPN                 :$status_openvpn"
+echo -e "❇️ OpenVPN                 :$status_vpn"
 echo -e "❇️ Dropbear                :$status_beruangjatuh"
-#echo -e "❇️ Stunnel4                :$status_stunnel"
+echo -e "❇️ Stunnel4                :$status_stunnel"
 echo -e "❇️ Squid                   :$status_squid"
 echo -e "❇️ Fail2Ban                :$status_fail2ban"
 echo -e "❇️ Crons                   :$status_cron"

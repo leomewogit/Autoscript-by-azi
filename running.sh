@@ -268,14 +268,14 @@ else
 fi
 # STATUS SERVICE WEBSOCKET TLS
 if [[ $dropbear_status == "running" ]]; then 
-   dropbear_status=" ${GREEN}Running ${NC}( No Error )${NC}"
+   shdroptls=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
-   dropbear_status="${RED}  Not Running ${NC}  ( Error )${NC}"
+   shdroptls="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
 # STATUS SERVICE WEBSOCKET DROPBEAR
 if [[ $dropbear_status == "running" ]]; then 
-   dropbear_status=" ${GREEN}Running ${NC}( No Error )${NC}"
+   shdrophttp=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
    dropbear_status="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
@@ -351,8 +351,8 @@ echo -e "❇️ XRAYS Vless None TLS    :$status_nontls_vless"
 echo -e "❇️ XRAYS Trojan            :$status_virus_trojan"
 echo -e "❇️ Trojan GO               :$status_virus_trojan"
 #echo -e "❇️ Trojan GFW              :$status_virus_trojangfw"
-echo -e "❇️ Websocket TLS           :$status_beruangjatuh"
-echo -e "❇️ Websocket None TLS      :$status_beruangjatuh"
+echo -e "❇️ Websocket TLS           :$shdroptls"
+echo -e "❇️ Websocket None TLS      :$shdrophttp"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"

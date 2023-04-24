@@ -226,7 +226,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                 ⇱ CYBER VPN ⇲                 \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH & OVPN${NC}         ${GREEN}[06]${NC} • ${COLOR1}MENU L2TP & PPTP [ IPSEC ]${NC}"
+echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH & OVPN${NC}  ${GREEN}[06]${NC} • ${COLOR1}MENU L2TP & PPTP [ IPSEC ]${NC}"
 echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[07]${NC} • ${COLOR1}INFO RUNNING${NC}"          
 echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[08]${NC} • ${COLOR1}TEMA VPS${NC}"  
 echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • ${COLOR1}SETTINGS${NC}"

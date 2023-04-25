@@ -6,13 +6,7 @@ rm -f /usr/bin/menu
 rm -f /usr/bin/usernew
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/menu.sh"
 wget -q -O /usr/bin/setting "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Themes/setting.sh"
-wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/edu-proxy
-wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/usernew.sh"
-systemctl daemon-reload
-systemctl enable edu-proxy.service
-systemctl start edu-proxy.service
-systemctl restart edu-proxy.service
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CCEp3uoQ5E4LxkydfzcM7yD6elos6Ufh' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1CCEp3uoQ5E4LxkydfzcM7yD6elos6Ufh" -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udpwget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/usernew.sh"
 echo -e "\e[32mUpdate Selesai...\e[0m"
 chmod 777 /usr/bin/menu
 chmod 777 /usr/bin/setting

@@ -80,7 +80,8 @@ echo "[14].WEBMIN"
 echo "[15].Cek semua port"
 echo "[16].Slowdns setting"
 echo "[17].Menu Backup"
-echo "[18].About"
+echo "[18].CREATE SSH UDP"
+echo "[19].About"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p    "Pilih Nomor :" bro
 
@@ -173,6 +174,11 @@ then
 menu-backup
 fi
 if [ $bro = 18 ] || [ $bro = 18 ]
+then
+udp
+fi
+
+if [ $bro = 19 ] || [ $bro = 19 ]
 then
 clear
 neofetch

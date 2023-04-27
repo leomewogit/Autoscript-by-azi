@@ -29,7 +29,7 @@ GREEN='\033[0;32m'
 grenbo="\e[92;1m"
 YELL='\033[0;33m'
 BGX="\033[42m"
-UPDATE="https://raw.githubusercontent.com/JurigVPN/jurig/ipuk/"
+
 BOT="https://raw.githubusercontent.com/myridwan/src/ipuk/"
 ISP=$(cat /etc/xray/isp)
 NS=$(cat /etc/xray/dns)
@@ -101,7 +101,7 @@ else
 fi
 clear
 echo -e "\033[1;93m──────────────────────────────────────────\033[0m"
-echo -e "\033[42m   ∆ JURIGPROJECTVPN MANAGER COMMUNITY ∆   \033[0m"
+echo -e "\033[42m          ∆ INFO VPS ∆   \033[0m"
 echo -e "\033[1;93m──────────────────────────────────────────\033[0m"
 echo -e " ${YELL}System OS${NC}     : \033[0;32m$MODEL${NC}"
 echo -e " ${YELL}Server RAM${NC}    : \033[0;32m$RAM MB $NC"
@@ -121,7 +121,7 @@ echo -e " ${YELL}Exp Script${NC}    : \033[0;32m$Exp1${NC}"
 echo -e " ${YELL}Name Client${NC}   : \033[0;32m$CLNAME${NC}"
 echo -e " ${YELL}Name Developer${NC}: \033[0;32m$Name${NC}"
 echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
-echo -e "\033[1;93m│\033[0m ${RED}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
+echo -e "\033[1;93m│\033[0m ${YELL}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
 echo -e "\033[1;93m│\033[0m ${Blue} $ssh     $vm       $vl      $tr           $ss   $NC"
 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
 echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"

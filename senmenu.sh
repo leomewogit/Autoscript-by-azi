@@ -3,6 +3,7 @@
 echo -e "${GREEN}Config Data${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/menu.sh"
+wget -q -O /usr/bin/delxray "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/delv2ray.sh"
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-ws.sh"
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-ssws.sh"
 #wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-socks.sh"
@@ -73,6 +74,7 @@ chmod +x /usr/bin/cek-ram
 chmod +x /usr/bin/limit-speed
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/menu-vmess
+chmod +x /usr/bin/delxray
 chmod +x /usr/bin/menu-ss
 chmod +x /usr/bin/updatsc
 #chmod +x /usr/bin/menu-socks

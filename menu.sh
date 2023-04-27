@@ -43,7 +43,7 @@ LOADCPU=$(printf '%-0.00001s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }
 MODEL=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 CORE=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
 Exp="Never Expired"
-Name="JurigVPN Tunneling"
+Name="CYBER VPN"
 DATEVPS=$(date +'%d/%m/%Y')
 TIMEZONE=$(printf '%(%H:%M:%S)T')
 SERONLINE=$(uptime -p | cut -d " " -f 2-10000)
@@ -124,83 +124,41 @@ echo -e "\033[1;93m┌───────────────────�
 echo -e "\033[1;93m│\033[0m ${YELL}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
 echo -e "\033[1;93m│\033[0m ${Blue} $ssh     $vm       $vl      $tr           $ss   $NC"
 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
-echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
-echo -e "\033[1;93m│  ${grenbo}1.${NC} \033[0;36mSSH OVPN MANAGER${NC} ${grenbo}11.${NC} \033[0;36mLOAD VPS INFO${NC}"
-echo -e "\033[1;93m│  ${grenbo}2.${NC} \033[0;36mVMESS MANAGER${NC}    ${grenbo}12.${NC} \033[0;36mSPEEDTEST${NC}"
-echo -e "\033[1;93m│  ${grenbo}3.${NC} \033[0;36mVLESS MANAGER${NC}    ${grenbo}13.${NC} \033[0;36mCHANGE DOMAIN${NC}"
-echo -e "\033[1;93m│  ${grenbo}4.${NC} \033[0;36mTROJAN MANAGER${NC}   ${grenbo}14.${NC} \033[0;36mCHANGE BANNER${NC}"
-echo -e "\033[1;93m│  ${grenbo}5.${NC} \033[0;36mSHDWSK MANAGER${NC}   ${grenbo}15.${NC} \033[0;36mRESTART SERVICE${NC}"
-echo -e "\033[1;93m│  ${grenbo}6.${NC} \033[0;36mRUNNING SYSTEM${NC}   ${grenbo}16.${NC} \033[0;36mRESTART SERVER${NC}"
-echo -e "\033[1;93m│  ${grenbo}7.${NC} \033[0;36mBACKUP & RESTORE${NC} ${grenbo}17.${NC} \033[0;36mBOT MANAGER[OFF]${NC}"
-echo -e "\033[1;93m│  ${grenbo}8.${NC} \033[0;36mUPDATE SCRIPT${NC}    ${grenbo}18.${NC} \033[0;36mCHANGE PW VPS${NC}"
-echo -e "\033[1;93m│  ${grenbo}9.${NC} \033[0;36mCEK BANDWITH${NC}     ${grenbo}19.${NC} \033[0;36mSET AUTO REBOOT${NC}"
-echo -e "\033[1;93m│  ${grenbo}10.${NC} \033[0;36mPORT VPS INFO${NC}"
-echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
-echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
-echo -e " \033[42m  ∆ JURIGPROJECTVPN MANAGE AUTOSCRIPT ∆   \033[0m"
-echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "\E[39;1;92m                    ⇱ STATUS SERVICE ⇲                        \E[0m"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "     ${BICyan} NGINX ${NC}: ${GREEN}$resngx         ${LIGHT} Today  : $ttoday"
+echo -e "     ${BICyan} XRAY  ${NC}: ${GREEN}$resv2r         ${LIGHT} Monthly: $tmon"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${GREEN}                         🐸V.3.0.0 LTS🐸"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "\E[39;1;92m                     ⇱ MENU SERVICE ⇲                         \E[0m"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
-read -p "Select From Options [ 1 - 18 ] : " menu
-case $menu in
-1)
-    ssh
-    ;;
-2)
-    vmess
-    ;;
-3)
-    vless
-    ;;
-4)
-    trojan
-    ;;
-5)
-    shadowsocks
-    ;;
-6)
-    run
-    ;;
-7)
-    get-backres
-    ;;
-8)
-    wget ${UPDATE}update.sh && chmod +x update.sh && ./update.sh
-    ;;
-9)
-    m-bandwith
-    ;;
-10)
-    portin
-    ;;
-11)
-    gotop
-    ;;
-12)
-    clear
-    speedtest
-    ;;
-13)
-    get-domain
-    ;;
-14)
-    nano /etc/issue.net
-    ;;
-15)
-    seres
-    ;;
-16)
-    reboot
-    ;;
-17)
-    wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
-    ;;
-18)
-    passwd
-    ;;
-19)
-    auto-reboot
-    ;;
-*)
-    menu
-    ;;
+echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH & OVPN MENU $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}MENU L2TP & PPTP [ IPSEC ]$NC"
+echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
+echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}TEMA VPS $NC"
+echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
+echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}CEKING UPDATE  $NC" 
+echo -e " ${RED}"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+
+echo
+read -p " Select menu : " opt
+echo -e ""
+case $opt in
+01 | 1) clear ; menu-ssh ;;
+02 | 2) clear ; menu-vmess ;;
+03 | 3) clear ; menu-vless ;;
+04 | 4) clear ; menu-trojan ;;
+05 | 5) clear ; menu-ss ;;
+06 | 6) clear ; menu-ipsec ;;
+07 | 7) clear ; running ;;
+08 | 8) clear ;  bash thema.sh ;;
+09 | 9) clear ; setting ;;
+10) clear ; updatsc ;;
+
+100) clear ; $up2u ;;
+00 | 0) clear ; menu ;;
+*) clear ; menu ;;
 esac

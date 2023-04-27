@@ -113,9 +113,9 @@ ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
 
 clear
-echo -e "$GREEN┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1                     << INFORMASI VPS >>                    \E[0m"
-echo -e "$GREEN└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "\E[39;1;92m                   ⇱ SCRIPT PREMIUM ⇲                      \E[0m"
+echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 
 echo -e "• Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "• Current Domain      = $( cat /etc/xray/domain )"

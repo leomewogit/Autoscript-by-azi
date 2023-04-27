@@ -191,21 +191,21 @@ echo -e "$COLOR1│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSO
 echo -e "$COLOR1│\033[0m ${Blue} $ssh1     $vmc       $vlx      $trx           $ssx   $NC"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ Vluks Store ⇲                         \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}                  🦝V.3.0.0 LTS🦝"
 echo -e ""
-echo -e "${COLOR1}[01]${NC} • [${YELLOW}SSH${NC}]      ${COLOR1}[08]${NC} • [${YELLOW}BACKUP${NC}]"
-echo -e "${COLOR1}[02]${NC} • [${YELLOW}VMESS${NC}]    ${COLOR1}[09]${NC} • [${YELLOW}SET${NC}]"
-echo -e "${COLOR1}[03]${NC} • [${YELLOW}VLESS${NC}]    ${COLOR1}[10]${NC} • [${YELLOW}INFORMATION${NC}]"
-echo -e "${COLOR1}[04]${NC} • [${YELLOW}TROJAN${NC}]   ${COLOR1}[11]${NC} • [${YELLOW}ADD DOMAIN${NC}]"
-echo -e "${COLOR1}[05]${NC} • [${YELLOW}SODOS${NC}]    ${COLOR1}[12]${NC} • [${YELLOW}CERT${NC}]"
-echo -e "${COLOR1}[06]${NC} • [${YELLOW}SET DNS${NC}]  ${COLOR1}[13]${NC} • [${YELLOW}LOAD VPS${NC}]"
-echo -e "${COLOR1}[07]${NC} • [${YELLOW}THEME${NC}]    ${COLOR1}[14]${NC} • [${YELLOW}CHANGE PW VPS${NC}]"
+echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${CYAN}                   ⇱ CYBER VPN ⇲                 ${NC}"
+echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e ""
+echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH & OVPN${NC}  ${GREEN}[06]${NC} • ${COLOR1}MENU L2TP & PPTP [ IPSEC ]${NC}"
+echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[07]${NC} • ${COLOR1}INFO RUNNING${NC}"          
+echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[08]${NC} • ${COLOR1}TEMA VPS${NC}"  
+echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • ${COLOR1}SETTINGS${NC}"
+echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[10]${NC} • ${COLOR1}UPDATES${NC}"
 echo -e " ${RED}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ Vluks Store ⇲                         \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${CYAN}                  ⇱ AZI GAMING404 ⇲              ${NC}"
+echo -e "${ungu}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 
 echo -e ""
 
@@ -216,15 +216,11 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-dns ;;
-06 | 7) clear ; menu-theme ;;
-07 | 8) clear ; menu-backup ;;
-09 | 9) clear ; menu-set ;;
-10) clear ; info ;;
-11) clear ; add-host ;;
-12) clear ; crtxray ;;
-13) clear ; gotop ;;
-14) clear ; passwd ;;
+06 | 6) clear ; menu-ipsec ;;
+07 | 7) clear ; running ;;
+08 | 8) clear ;  bash thema.sh ;;
+09 | 9) clear ; setting ;;
+10) clear ; updatsc ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

@@ -106,42 +106,36 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1│"
 echo -e "$COLOR1│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC    $COLOR1│"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "      $COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "      $COLOR1│${NC}                 •  THE MOON  •                  $COLOR1│$NC"
-echo -e "      $COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "\E[39;1;92m                     ⇱ MENU SERVICE ⇲                         \E[0m"
+echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${CYAN}                         🦊V.3.0.0 LTS🦊"
+echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
-echo -e " ${CYAN}[01]${NC} • [SSH MENU${NC}]${CYAN}[08]${NC} • [INSTALL ADS-BLOCK${NC}]${CYAN}[15]${NC} • [RUNNING${NC}]"
-echo -e " ${CYAN}[02]${NC} • [VMESS${NC}]   ${CYAN}[09]${NC} • [ADS-BLOCK MENU${NC}]   ${CYAN}[16]${NC} • [SPEEDTEST${NC}]"
-echo -e " ${CYAN}[03]${NC} • [VLESS${NC}]   ${CYAN}[10]${NC} • [CEK-TRAFIK${NC}]       ${CYAN}[17]${NC} • [INFO${NC}]"
-echo -e " ${CYAN}[04]${NC} • [TROJAN${NC}]  ${CYAN}[11]${NC} • [CEK BANDWIDTH${NC}]    ${CYAN}[18]${NC} • [CLEARLOG${NC}]"
-echo -e " ${CYAN}[05]${NC} • [SSWS ${NC}]   ${CYAN}[12]${NC} • [UPDATE-SCRIPT${NC}]    ${CYAN}[19]${NC} • [REBOOT${NC}]"
-echo -e " ${CYAN}[06]${NC} • [ADD-HOST${NC}]${CYAN}[13]${NC} • [RESTART SERVICE${NC}]     "
-echo -e " ${CYAN}[07]${NC} • [GEN-CERT${NC}]${CYAN}[14]${NC} • [AUTO-POINTING${NC}] "
-echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
-echo -e " [X]${NC} • [PRESS X TO EXIT]"
+echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH & OVPN MENU $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}MENU L2TP & PPTP [ IPSEC ]$NC"
+echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
+echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}TEMA VPS $NC"
+echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
+echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}CEKING UPDATE  $NC" 
+echo -e " ${RED}"
+echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+
+echo
+read -p " Select menu : " opt
 echo -e ""
-echo -ne " Select menu : "; read opt
 case $opt in
-1) clear ; menussh ;;
-2) clear ; menuv ;;
-3) clear ; menul ;;
-4) clear ; menut ;;
-5) clear ; menus ;;
-6) clear ; add-host ;;
-7) clear ; genssl ;;
-8) clear ; rm -rf /usr/local/sbin/helium && wget -q -O /usr/local/sbin/helium https://raw.githubusercontent.com/abidarwish/helium/main/helium.sh && chmod +x /usr/local/sbin/helium && helium ;;
-9) clear ; helium ;;
-10) clear ; cek-trafik ;;
-11) clear ; cek-bandwidth ;;
-12) clear ; updatsc ;;
-13) clear ; restartsc ;;
-14) clear ; domaingratis ;;
-15) clear ; running ;;
-16) clear ; cek-speed ;;
-17) clear ; cat /root/log-install.txt ;;
-18) clear ; clearlog ;;
-19) clear ; reboot ;;
-0) clear ; menu ;;
-x) exit ;;
+01 | 1) clear ; menu-ssh ;;
+02 | 2) clear ; menu-vmess ;;
+03 | 3) clear ; menu-vless ;;
+04 | 4) clear ; menu-trojan ;;
+05 | 5) clear ; menu-ss ;;
+06 | 6) clear ; menu-ipsec ;;
+07 | 7) clear ; running ;;
+08 | 8) clear ;  bash thema.sh ;;
+09 | 9) clear ; setting ;;
+10) clear ; updatsc ;;
+
+100) clear ; $up2u ;;
+00 | 0) clear ; menu ;;
 *) clear ; menu ;;
 esac

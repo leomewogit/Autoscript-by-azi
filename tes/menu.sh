@@ -9,39 +9,9 @@ ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 trx=$(grep -c -E "^#! " "/etc/xray/config.json")
 
 ssx=$(grep -c -E "^## " "/etc/xray/config.json")
-
-# status
-rm -rf /root/status
-wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
-
-
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "memeriksa vps anda"
-sleep 0.5
-CEKEXPIRED () {
-        today=$(date -d +1day +%Y -%m -%d)
-        Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
-        if [[ $today < $Exp1 ]]; then
-        echo "status script aktif.."
-        else
-        echo "SCRIPT ANDA EXPIRED";
-        exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
-CEKEXPIRED
-else
-echo "Akses di tolak!! Benget sia hurung!!";
-exit 0
-fi
-
-
 #######PERIZINAN
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -59,7 +29,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -76,7 +46,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -94,7 +64,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | grep $MYIP | awk '{print $3}')
 fi
 
 clear
@@ -113,7 +83,7 @@ export PURPLE='\033[0;35m'
 export CYAN='\033[0;36m'
 export LIGHT='\033[0;37m'
 export NC='\033[0m'
-export ungu='\033[0;35m'
+
 # // Export Banner Status Information
 export EROR="[${RED} EROR ${NC}]"
 export INFO="[${YELLOW} INFO ${NC}]"
@@ -144,27 +114,27 @@ fi
 export IP=$( curl -s https://ipinfo.io/ip/ )
 
 # // SSH Websocket Proxy
-ssh_ws=$( systemctl status dropbear | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+ssh_ws=$( systemctl status ws-epro | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws="${GREEN}aktif${NC}"
+    status_ws="${GREEN}ON${NC}"
 else
-    status_ws="${RED}tidak aktif${NC}"
+    status_ws="${RED}OFF${NC}"
 fi
 
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    status_nginx="${GREEN}Aktif${NC}"
+    status_nginx="${GREEN}ON${NC}"
 else
-    status_nginx="${RED}Tidak aktif${NC}"
+    status_nginx="${RED}OFF${NC}"
 fi
 
 # // SSH Websocket Proxy
 xray=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 if [[ $xray == "running" ]]; then
-    status_xray="${GREEN}aktif${NC}"
+    status_xray="${GREEN}ON${NC}"
 else
-    status_xray="${RED}tidak aktif${NC}"
+    status_xray="${RED}OFF${NC}"
 fi
 
 clear
@@ -196,9 +166,9 @@ fi
 }
 clear
 clear
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m              ⇱ INFORMASI VPS                  \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -207,34 +177,35 @@ echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "□ Server IP           = ${IP}"
 echo -e "□ Clients Name        = $Name"
 echo -e "□ Expired Script VPS  = $Exp"
-echo -e "□ INFO UPDATE         = ${GREEN}$(cat /root/status)${NC}"
+echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
-echo -e "□ AutoScript By       =  ${GREEN}( AZI GAMING404 )${NC}"
+echo -e "□ AutoScript By Dev   = Wak ${GREEN}( Vlukss )${NC}"
 
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ STATUS LAYANAN ⇲                 \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "  ${GREEN}SSH WebSocket${NC}:[${status_ws}]  ${GREEN}XRAY${NC}:[${status_xray}]  ${GREEN}NGINX${NC}:[${status_nginx}]"
-echo -e "${ungu}┌───────────────────────────────────────────────┐${NC}"
-echo -e "${ungu}│\033[0m ${BOLD}${YELLOW}              SSH user  XRAY user"
-echo -e "${ungu}│\033[0m ${Blue}                   $ssh1      $vmc     $NC"
-echo -e "${ungu}└───────────────────────────────────────────────┘${NC}"
-echo -e "${RED}                  🐺 V.3.0.0 LTS 🐺"
+echo -e " [ ${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${status_xray} ]      [ ${GREEN}NGINX${NC} : ${status_nginx} ]"
+echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│\033[0m ${BOLD}${YELLOW}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
+echo -e "$COLOR1│\033[0m ${Blue} $ssh1     $vmc       $vlx      $trx           $ssx   $NC"
+echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                 ⇱ CYBER VPN ⇲                 \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ Vluks Store ⇲                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "${GREEN}[01]${NC} • ${COLOR1}SSH & OVPN${NC}  ${GREEN}[06]${NC} • ${COLOR1}MENU L2TP & PPTP [ IPSEC ]${NC}"
-echo -e "${GREEN}[02]${NC} • ${COLOR1}VMESS${NC}       ${GREEN}[07]${NC} • ${COLOR1}INFO RUNNING${NC}"          
-echo -e "${GREEN}[03]${NC} • ${COLOR1}VLESS${NC}       ${GREEN}[08]${NC} • ${COLOR1}TEMA VPS${NC}"  
-echo -e "${GREEN}[04]${NC} • ${COLOR1}TROJAN${NC}      ${GREEN}[09]${NC} • ${COLOR1}SETTINGS${NC}"
-echo -e "${GREEN}[05]${NC} • ${COLOR1}SODOSOK${NC}     ${GREEN}[10]${NC} • ${COLOR1}UPDATES${NC}"
+echo -e "${COLOR1}[01]${NC} • [${YELLOW}SSH${NC}]      ${COLOR1}[08]${NC} • [${YELLOW}BACKUP${NC}]"
+echo -e "${COLOR1}[02]${NC} • [${YELLOW}VMESS${NC}]    ${COLOR1}[09]${NC} • [${YELLOW}SET${NC}]"
+echo -e "${COLOR1}[03]${NC} • [${YELLOW}VLESS${NC}]    ${COLOR1}[10]${NC} • [${YELLOW}INFORMATION${NC}]"
+echo -e "${COLOR1}[04]${NC} • [${YELLOW}TROJAN${NC}]   ${COLOR1}[11]${NC} • [${YELLOW}ADD DOMAIN${NC}]"
+echo -e "${COLOR1}[05]${NC} • [${YELLOW}SODOS${NC}]    ${COLOR1}[12]${NC} • [${YELLOW}CERT${NC}]"
+echo -e "${COLOR1}[06]${NC} • [${YELLOW}SET DNS${NC}]  ${COLOR1}[13]${NC} • [${YELLOW}LOAD VPS${NC}]"
+echo -e "${COLOR1}[07]${NC} • [${YELLOW}THEME${NC}]    ${COLOR1}[14]${NC} • [${YELLOW}CHANGE PW VPS${NC}]"
 echo -e " ${RED}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                ⇱ AZI GAMING404 ⇲              \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ Vluks Store ⇲                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""
 
@@ -245,11 +216,15 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-ipsec ;;
-07 | 7) clear ; running ;;
-08 | 8) clear ;  bash thema.sh ;;
-09 | 9) clear ; setting ;;
-10) clear ; updatsc ;;
+06 | 6) clear ; menu-dns ;;
+06 | 7) clear ; menu-theme ;;
+07 | 8) clear ; menu-backup ;;
+09 | 9) clear ; menu-set ;;
+10) clear ; info ;;
+11) clear ; add-host ;;
+12) clear ; crtxray ;;
+13) clear ; gotop ;;
+14) clear ; passwd ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

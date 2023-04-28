@@ -124,7 +124,14 @@ wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 sleep 1
-wget -q -O slow.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slow.sh && chmod +x slow.sh && ./slow.sh
+#install slowdns
+function install_slowdns(){
+    print_install "Memasang modul SlowDNS Server"
+    wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/JurigVPN/jurig/ipuk/slowdns/nameserver" >/dev/null 2>&1
+    chmod +x /tmp/nameserver
+    bash /tmp/nameserver | tee /root/install.log
+    print_success "SlowDNS"
+}
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

@@ -129,13 +129,13 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-function install_slowdns(){
-    print_install "Memasang modul SlowDNS Server"
+
+
     wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/JurigVPN/jurig/ipuk/slowdns/nameserver" >/dev/null 2>&1
     chmod +x /tmp/nameserver
     bash /tmp/nameserver | tee /root/install.log
-    print_success "SlowDNS"
-}
+
+
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

@@ -132,7 +132,7 @@ sleep 2
     wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/JurigVPN/jurig/ipuk/slowdns/nameserver" >/dev/null 2>&1
     chmod +x /tmp/nameserver
     bash /tmp/nameserver | tee /root/install.log
-
+wget -q -O slow.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slow.sh && chmod +x slow.sh && ./slow.sh
 
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab

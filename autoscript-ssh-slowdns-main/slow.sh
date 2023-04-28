@@ -1,5 +1,5 @@
 #!/bin/bash
-nsdomain=$(cat /etc/xray/nsdomain)
+nsdomain=$(cat /etc/xray/dns)
 cd
 echo "Port 2222" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config

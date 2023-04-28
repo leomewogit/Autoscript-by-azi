@@ -20,7 +20,7 @@ LIGHT='\033[0;37m'
 
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -38,7 +38,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -55,7 +55,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -83,29 +83,29 @@ function delvmess(){
     clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}  • You Dont have any existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}  • You Dont have any existing clients!"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}  • [NOTE] Press any key to back on menu"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
 menu-vmess
@@ -114,18 +114,18 @@ exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | u
 sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}   • Accound Delete Successfully"
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}   • Client Name : $user"
-echo -e "$COLOR1│${NC}   • Expired On  : $exp"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • DELETE XRAY USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}   • Accound Delete Successfully"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}   • Client Name : $user"
+echo -e "$GREEN│${NC}   • Expired On  : $exp"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -133,34 +133,34 @@ fi
 }
 function renewvmess(){
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "$COLOR1│${NC}  • You have no existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN│${NC}  • You have no existing clients!"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}  • [NOTE] Press any key to back on menu"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
 menu-vmess
@@ -179,19 +179,19 @@ exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
 sed -i "/### $user/c\### $user $exp4" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}   [INFO]  $user Account Renewed Successfully"
-echo -e "$COLOR1│${NC}   "
-echo -e "$COLOR1│${NC}   Client Name : $user"
-echo -e "$COLOR1│${NC}   Days Added  : $masaaktif Days"
-echo -e "$COLOR1│${NC}   Expired On  : $exp4"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • RENEW VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}   [INFO]  $user Account Renewed Successfully"
+echo -e "$GREEN│${NC}   "
+echo -e "$GREEN│${NC}   Client Name : $user"
+echo -e "$GREEN│${NC}   Days Added  : $masaaktif Days"
+echo -e "$GREEN│${NC}   Expired On  : $exp4"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -202,10 +202,10 @@ function cekvmess(){
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • VMESS USER ONLINE •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • VMESS USER ONLINE •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 
 for akun in "${data[@]}"
 do
@@ -240,10 +240,10 @@ rm -rf /tmp/ipvmess.txt
 done
 
 rm -rf /tmp/other.txt
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -253,10 +253,10 @@ function addvmess(){
 clear
 source /var/lib/ssnvpn-pro/ipvps.conf
 domain=$(cat /etc/xray/domain)
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -264,11 +264,11 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 read -rp "   Input Username : " -e user
       
 if [ -z $user ]; then
-echo -e "$COLOR1│${NC} [Error] Username cannot be empty "
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN│${NC} [Error] Username cannot be empty "
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -277,15 +277,15 @@ fi
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} Please choose another name."
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} Please choose another name."
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 			read -n 1 -s -r -p "   Press any key to back on menu"
 menu
 		fi
@@ -353,11 +353,11 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} Remarks       : ${user}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • CREATE VMESS USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN ${NC} Remarks       : ${user}"
 echo -e "$COLOR1 ${NC} Expired On    : $exp" 
 echo -e "$COLOR1 ${NC} Domain        : ${domain}" 
 echo -e "$COLOR1 ${NC} Port TLS      : ${tls}" 
@@ -370,8 +370,8 @@ echo -e "$COLOR1 ${NC} Network       : ws"
 echo -e "$COLOR1 ${NC} Path          : /vmess" 
 echo -e "$COLOR1 ${NC} Path WSS      : wss://bug.com/vmess" 
 echo -e "$COLOR1 ${NC} ServiceName   : vmess-grpc" 
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} Link TLS : "
 echo -e "$COLOR1 ${NC} ${vmesslink1}" 
 echo -e "$COLOR1 ${NC} "
@@ -380,10 +380,10 @@ echo -e "$COLOR1 ${NC} ${vmesslink2}"
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link GRPC : "
 echo -e "$COLOR1 ${NC} ${vmesslink3}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -401,16 +401,16 @@ echo -e " $COLOR1│$NC   ${COLOR1}[02]${NC} • RENEW VMESS${NC}    ${COLOR1}[0
 echo -e " $COLOR1│$NC                                              ${NC} $COLOR1│$NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 01 | 1) clear ; addvmess ;;
 02 | 2) clear ; renewvmess ;;
-03 | 3) clear ; delvmess ;;
+03 | 3) clear ; delv2ray ;;
 04 | 4) clear ; cekvmess ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;

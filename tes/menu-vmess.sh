@@ -5,8 +5,6 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 NC="\e[0m"
 RED="\033[0;31m" 
-COLOR1="$(cat /etc/ssnvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/ssnvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
 ###########- END COLOR CODE -##########
 
 RED='\033[0;31m'

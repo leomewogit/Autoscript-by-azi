@@ -3,7 +3,7 @@ echo -e cheking update
 sleep 2
 rm -f /usr/bin/setting
 rm -f /usr/bin/menu
-rm -f /usr/bin/usernew
+
 rm -f /usr/bin/menu-ss
 rm -f /usr/bin/menu-vmess
 rm -f /usr/bin/menu-vless

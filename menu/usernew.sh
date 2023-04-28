@@ -47,9 +47,9 @@ fi
 # Getting
 
 domain=$(cat /etc/xray/domain)
-sldomain=$(cat /etc/xray/dns)
+sldomain=$(cat /etc/slowdns/infons)
 cdndomain=$(cat /root/awscdndomain)
-slkey=$(cat /etc/slowdns/server.pub)
+slkey=$(cat /root/server.pub)
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                 ⇱ CREATE ACCOUNT ⇲            \E[0m"

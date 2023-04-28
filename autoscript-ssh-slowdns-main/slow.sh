@@ -10,6 +10,9 @@ service sshd restart
 echo "Install Slowdns"
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
+wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/JurigVPN/jurig/ipuk/slowdns/nameserver" >/dev/null 2>&1
+    chmod +x /tmp/nameserver
+    bash /tmp/nameserver | tee /root/install.log
 wget -q -O /etc/slowdns/sldns-server "https://github.com/myridwan/abc/raw/ipuk/slowdns/dnstt-server"
 wget -q -O /etc/slowdns/sldns-client "https://github.com/myridwan/abc/raw/ipuk/slowdns/dnstt-client"
 cd

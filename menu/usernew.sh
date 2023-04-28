@@ -47,9 +47,9 @@ fi
 # Getting
 
 domain=$(cat /etc/xray/domain)
-sldomain=$(cat /usr/sbin/potatonc/slowdns/nameserver)
+sldomain=$(cat /etc/xray/dns)
 cdndomain=$(cat /root/awscdndomain)
-slkey=$(cat /usr/sbin/potatonc/slowdns/server.pub)
+slkey=$(cat /etc/slowdns/server.pub)
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                 ⇱ CREATE ACCOUNT ⇲            \E[0m"

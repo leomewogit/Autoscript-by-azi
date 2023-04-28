@@ -35,6 +35,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 	echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$GREEN│${NC} ${LIGHT}             • DELETE XRAY USER •              ${NC} $LIGHT│$NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+	echo "     No  Expired   User"
 	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then

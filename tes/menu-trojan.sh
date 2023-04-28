@@ -2,12 +2,26 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-NC="\e[0m"
-RED="\033[0;31m" 
+RED='\033[0;31m'
+
+NC='\033[0m'
+
+GREEN='\033[0;32m'
+
+ORANGE='\033[0;33m'
+
+BLUE='\033[0;34m'
+
+PURPLE='\033[0;35m'
+
+CYAN='\033[0;36m'
+
+LIGHT='\033[0;37m'
+
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -25,7 +39,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -42,7 +56,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Vlukss/izinvps/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -109,10 +123,10 @@ rm -rf /tmp/iptrojan.txt
 done
 
 rm -rf /tmp/other.txt
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
@@ -123,29 +137,29 @@ function deltrojan(){
     clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#! " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}  • You Dont have any existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}  • You Dont have any existing clients!"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}  • [NOTE] Press any key to back on menu"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
 menu-trojan
@@ -154,18 +168,18 @@ exp=$(grep -wE "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | un
 sed -i "/^#! $user $exp/,/^},{/d" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}   • Accound Delete Successfully"
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}   • Client Name : $user"
-echo -e "$COLOR1│${NC}   • Expired On  : $exp"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • Vluks Store •            $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • DELETE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}   • Accound Delete Successfully"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}   • Client Name : $user"
+echo -e "$GREEN│${NC}   • Expired On  : $exp"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}              • Vluks Store •            $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
@@ -174,34 +188,34 @@ fi
 
 function renewtrojan(){
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 NUMBER_OF_CLIENTS=$(grep -c -E "^#! " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "$COLOR1│${NC}  • You have no existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • Vluks Store •            $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN│${NC}  • You have no existing clients!"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}              • Vluks Store •            $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
-echo -e "$COLOR1│${NC}"
-echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
+echo -e "$GREEN│${NC}"
+echo -e "$GREEN│${NC}  • [NOTE] Press any key to back on menu"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
 menu-trojan
@@ -220,19 +234,19 @@ exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
 sed -i "/#! $user/c\#! $user $exp4" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}   [INFO]  $user Account Renewed Successfully"
-echo -e "$COLOR1│${NC}   "
-echo -e "$COLOR1│${NC}   Client Name : $user"
-echo -e "$COLOR1│${NC}   Days Added  : $masaaktif Days"
-echo -e "$COLOR1│${NC}   Expired On  : $exp4"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}            • RENEW TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}   [INFO]  $user Account Renewed Successfully"
+echo -e "$GREEN│${NC}   "
+echo -e "$GREEN│${NC}   Client Name : $user"
+echo -e "$GREEN│${NC}   Days Added  : $masaaktif Days"
+echo -e "$GREEN│${NC}   Expired On  : $exp4"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
@@ -242,19 +256,19 @@ fi
 function addtrojan(){
 source /var/lib/ssnvpn-pro/ipvps.conf
 domain=$(cat /etc/xray/domain)
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 read -rp "   Input Username : " -e user
 if [ -z $user ]; then
-echo -e "$COLOR1│${NC}   [Error] Username cannot be empty "
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN│${NC}   [Error] Username cannot be empty "
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -262,15 +276,15 @@ fi
 user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 if [[ ${user_EXISTS} == '1' ]]; then
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}  Please choose another name."
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC}  Please choose another name."
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 read -n 1 -s -r -p "   Press any key to back on menu"
 trojan-menu
 fi
@@ -286,10 +300,10 @@ systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=${domain}#${user}"
 trojanlink="trojan://${uuid}@bug.com:${tr}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}           • CREATE TROJAN USER •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} Remarks     : ${user}" 
 echo -e "$COLOR1 ${NC} Expired On  : $exp" 
 echo -e "$COLOR1 ${NC} Host/IP     : ${domain}" 
@@ -298,17 +312,17 @@ echo -e "$COLOR1 ${NC} Key         : ${uuid}"
 echo -e "$COLOR1 ${NC} Path        : /trojan-ws"
 echo -e "$COLOR1 ${NC} Path WSS    : wss://bug.com/trojan-ws" 
 echo -e "$COLOR1 ${NC} ServiceName : trojan-grpc" 
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} Link WS : "
 echo -e "$COLOR1 ${NC} ${trojanlink}" 
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link GRPC : "
 echo -e "$COLOR1 ${NC} ${trojanlink1}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo "" 
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-trojan
@@ -316,18 +330,18 @@ menu-trojan
 
 
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              • TROJAN PANEL MENU •            ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD TROJAN    ${COLOR1}[03]${NC} • DELETE TROJAN${NC}   $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[02]${NC} • RENEW TROJAN${NC}  ${COLOR1}[04]${NC} • USER ONLINE     $COLOR1│$NC"
-echo -e " $COLOR1│$NC                                              ${NC} $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}              • TROJAN PANEL MENU •            ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e " $GREEN┌───────────────────────────────────────────────┐${NC}"
+echo -e " $GREEN│$NC   ${COLOR1}[01]${NC} • ADD TROJAN    ${COLOR1}[03]${NC} • DELETE TROJAN${NC}   $COLOR1│$NC"
+echo -e " $GREEN│$NC   ${COLOR1}[02]${NC} • RENEW TROJAN${NC}  ${COLOR1}[04]${NC} • USER ONLINE     $COLOR1│$NC"
+echo -e " $GREEN│$NC                                              ${NC} $COLOR1│$NC"
+echo -e " $GREEN│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
+echo -e " $GREEN└───────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "$GREEN│${NC}                 • Vluks Store •                 $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""

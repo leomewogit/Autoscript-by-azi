@@ -51,12 +51,14 @@ rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 clear
 echo ""
-echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$GREEN│${NC} ${LIGHT}             • DELETED XRAY USER •              ${NC} $LIGHT│$NC"
-echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"echo "Username  : $user"
-echo -e "${LIGHT}"
+echo ┌─────────────────────────────────────────────────┐
+echo │             • DELETED XRAY USER •              
+echo └─────────────────────────────────────────────────┘
+
+echo "Username  : $user"
+
 echo "Expired   : $exp"
-echo "${GREEN}============================================================"
-echo "${CYAN}           CyberVPN"
-echo "${GREEN}============================================================"
+echo  ============================================================
+echo           CyberVPN
+echo ============================================================
 

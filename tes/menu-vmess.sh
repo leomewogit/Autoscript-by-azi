@@ -2,7 +2,7 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/ssnvpn/theme/color.conf)
+
 NC="\e[0m"
 RED="\033[0;31m" 
 COLOR1="$(cat /etc/ssnvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
@@ -392,15 +392,15 @@ menu-vmess
 
 
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • VMESS PANEL MENU •              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD VMESS      ${COLOR1}[03]${NC} • DELETE VMESS${NC}   $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[02]${NC} • RENEW VMESS${NC}    ${COLOR1}[04]${NC} • USER ONLINE    $COLOR1│$NC"
-echo -e " $COLOR1│$NC                                              ${NC} $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${COLBG1}             • VMESS PANEL MENU •              ${NC} $COLOR1│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
+echo -e " $GREEN┌───────────────────────────────────────────────┐${NC}"
+echo -e " $GREEN│$NC   ${COLOR1}[01]${NC} • ADD VMESS      ${COLOR1}[03]${NC} • DELETE VMESS${NC}   $COLOR1│$NC"
+echo -e " $GREEN│$NC   ${COLOR1}[02]${NC} • RENEW VMESS${NC}    ${COLOR1}[04]${NC} • USER ONLINE    $COLOR1│$NC"
+echo -e " $GREEN│$NC                                              ${NC} $COLOR1│$NC"
+echo -e " $GREEN│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
+echo -e " $GREEN└───────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
 echo -e "$GREEN│${NC}                 • CyberVPN •                 $COLOR1│$NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}" 

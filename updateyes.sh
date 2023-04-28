@@ -3,7 +3,7 @@ echo -e cheking update
 sleep 2
 rm -f /usr/bin/setting
 rm -f /usr/bin/menu
-
+rm -f /usr/bin/usernew
 rm -f /usr/bin/menu-ss
 rm -f /usr/bin/menu-vmess
 rm -f /usr/bin/menu-vless
@@ -22,6 +22,9 @@ wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Azigaming404/
 
 wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/delv2ray.sh"
 
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/usernew.sh"
+
+chmod 777 /usr/bin/usernew
 chmod 777 /usr/bin/menu
 chmod 777 /usr/bin/setting
 chmod 777 /usr/bin/menu-ss 

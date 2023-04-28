@@ -79,9 +79,7 @@ read -rp "Input ur domain : " -e pp
 	echo $pp > /root/domain
         echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
     fi
-read -rp "Input ur ns-domain : " -e nsdomen
-echo "$nsdomen" > /etc/xray/nsdomain
-echo "$nsdomen" > /root/nsdomain
+
 clear
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"

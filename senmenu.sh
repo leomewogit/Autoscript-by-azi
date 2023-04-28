@@ -74,7 +74,7 @@ chmod +x /usr/bin/cek-ram
 chmod +x /usr/bin/limit-speed
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/menu-vmess
-chmod +x /usr/bin/delxray
+chmod +x /usr/bin/delvray
 chmod +x /usr/bin/menu-ss
 chmod +x /usr/bin/updatsc
 #chmod +x /usr/bin/menu-socks

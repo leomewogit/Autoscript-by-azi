@@ -1,8 +1,8 @@
 #!/bin/bash
 nsdomain=$(cat /etc/xray/dns)
 cd
-echo "Port 444" >> /etc/default/dropbear
-echo "Port 69" >> /etc/default/dropbear
+
+
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/default/dropbear
 service ssh restart
 service sshd restart

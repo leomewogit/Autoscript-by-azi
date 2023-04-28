@@ -32,10 +32,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 
 	clear
 	echo ""
-	echo " Select the existing client you want to remove"
-	echo " Press CTRL+C to return"
-	echo " ==============================="
-	echo "     No  Expired   User"
+	echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${LIGHT}             • DELETE XRAY USER •              ${NC} $LIGHT│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"echo "     No  Expired   User"
 	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -52,10 +51,12 @@ rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 clear
 echo ""
-echo "==============================="
-echo "  XRAYS/Vmess Account Deleted  "
-echo "==============================="
-echo "Username  : $user"
+echo -e "$GREEN┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$GREEN│${NC} ${LIGHT}             • DELETED XRAY USER •              ${NC} $LIGHT│$NC"
+echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"echo "Username  : $user"
+echo -e "${LIGHT}"
 echo "Expired   : $exp"
-echo "==============================="
-echo "Beta CyberVPN"
+echo "${GREEN}============================================================"
+echo "${CYAN}           CyberVPN"
+echo "${GREEN}============================================================"
+

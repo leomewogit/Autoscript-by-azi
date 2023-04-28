@@ -58,8 +58,9 @@ sleep 2
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
-
-wget -q https://github.com/andristji/Xray-SSH/raw/main/tools.sh;chmod +x tools.sh;./tools.sh
+sudo apt install vnstat
+sudo apt insta squid
+wget -q -O https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tools.sh && chmod +x tools.sh && ./tools.sh
 rm tools.sh
 clear
 

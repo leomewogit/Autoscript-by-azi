@@ -10,8 +10,8 @@ service sshd restart
 echo "Install Slowdns"
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/sldns-server "https://github.com/myridwan/abc/raw/ipuk/slowdns/sldns-server"
-wget -q -O /etc/slowdns/sldns-client "https://github.com/myridwan/abc/raw/ipuk/slowdns/sldns-client"
+wget -q -O /etc/slowdns/sldns-server "https://github.com/myridwan/abc/raw/ipuk/slowdns/dnstt-server"
+wget -q -O /etc/slowdns/sldns-client "https://github.com/myridwan/abc/raw/ipuk/slowdns/dnstt-client"
 cd
 chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub

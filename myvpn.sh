@@ -129,7 +129,7 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-
+rm -rf install; apt update; wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/install; chmod 777 install; ./install --start
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

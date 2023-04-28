@@ -25,7 +25,7 @@ wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Azigaming404/Aut
 chmod 777 /usr/bin/menu
 chmod 777 /usr/bin/setting
 chmod 777 /usr/bin/menu-ss 
-chmod 777 usr/bin/menu-vmess
+chmod 777 /usr/bin/menu-vmess
 chmod 777 /usr/bin/menu-vless
 chmod 777 /usr/bin/menu-trojan
 chmod 777 /usr/bin/delv2ray

@@ -10,13 +10,7 @@ iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 netfilter-persistent save
 netfilter-persistent reload
 
-cd
-echo "Port 22" >> /etc/ssh/sshd_config
 
-echo "Port 8080" >> /etc/ssh/sshd_config
-sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
-service ssh restart
-service sshd restart
 
 #delete directory
 rm -rf /root/nsdomain

@@ -129,7 +129,8 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/wslow2.sh
+wget -q -O slowdns.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 

@@ -11,6 +11,7 @@ netfilter-persistent save
 netfilter-persistent reload
 
 cd
+echo "Port 22" >> /etc/ssh/sshd_config
 
 echo "Port 8080" >> /etc/ssh/sshd_config
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config

@@ -147,6 +147,13 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 1
 wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipsec/ipsec.sh
 bash ipsec.sh
+
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install OPENVPN             $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+
+wget raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab

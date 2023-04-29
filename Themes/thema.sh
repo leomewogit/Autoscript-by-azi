@@ -30,7 +30,7 @@ read -p    "Pilih Nomor :" bro
 if [ $bro = 1 ] || [ $bro = 1 ]
 then
 rm -rf /usr/bin/menu
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tes/menu.sh" && chmod 777 /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu.sh" && chmod 777 /usr/bin/menu
 menu
 fi
 if [ $bro = 2 ] || [ $bro = 2 ]

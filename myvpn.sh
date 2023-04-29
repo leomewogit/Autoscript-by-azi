@@ -129,7 +129,7 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-rm -rf install; apt update; wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/install; chmod 777 install; ./install --start
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/wslow2.sh
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 
@@ -178,7 +178,7 @@ rm -f ins-xray.sh
 rm -f senmenu.sh
 rm -f setupku.sh
 rm -f xraymode.sh
-rm -f slow.sh
+
 echo "=====================-[  CyberVPN  ]-===================="
 echo ""
 echo "------------------------------------------------------------"

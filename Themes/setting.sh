@@ -167,7 +167,7 @@ fi
 if [ $bro = 16 ] || [ $bro = 16 ]
 then
 clear
-slowdns
+bash wslow2.sh
 fi
 if [ $bro = 17 ] || [ $bro = 17 ]
 then

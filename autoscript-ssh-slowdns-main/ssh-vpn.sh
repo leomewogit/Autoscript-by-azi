@@ -359,8 +359,6 @@ clear
 #installer OPH
 wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #installer openvpn
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
-
 
 rm -f /root/key.pem
 rm -f /root/cert.pem

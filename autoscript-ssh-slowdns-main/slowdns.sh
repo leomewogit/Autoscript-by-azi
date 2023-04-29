@@ -2,6 +2,7 @@
 # Script  By CyberVPN
 # 2023 SLOWDNS
 # ===============================================
+sudo apt install squid -y
 mkdir /var/lib/ssnvpn-pro/
 wget -q -O /var/lib/ssnvpn-pro/ipvps.conf "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ipvps.conf"
 chmod +x /usr/bin/delv2ray

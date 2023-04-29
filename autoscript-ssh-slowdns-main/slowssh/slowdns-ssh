@@ -73,7 +73,7 @@ touch infons
 echo $nameserver > infons
 set_ns () {
 sleep 1
-wget https://raw.githubusercontent.com/khaledagn/DNS-AGN/main/ssh/startdns 
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowssh/startdns 
 wget https://raw.githubusercontent.com/khaledagn/DNS-AGN/main/ssh/restartdns
 chmod +x startdns
 chmod +x restartdns

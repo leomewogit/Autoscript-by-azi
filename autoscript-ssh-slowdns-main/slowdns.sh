@@ -11,6 +11,12 @@ netfilter-persistent save
 netfilter-persistent reload
 
 cd
+
+echo "Port 8080" >> /etc/ssh/sshd_config
+sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
+service ssh restart
+service sshd restart
+
 #delete directory
 rm -rf /root/nsdomain
 rm nsdomain

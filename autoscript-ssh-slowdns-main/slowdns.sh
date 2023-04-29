@@ -1,6 +1,6 @@
 #!/bin/bash
-# Script  By nstaller slowdns
-# 2022 SLOWDNS
+# Script  By CyberVPN
+# 2023 SLOWDNS
 # ===============================================
 
 
@@ -18,7 +18,7 @@ rm nsdomain
 #input nameserver manual to cloudflare
 
 
-read -rp "Masukkan Subdomain: " -e sub
+read -rp "Masukkan Nameserver: " -e sub
 SUB_DOMAIN=${sub}
 NS_DOMAIN=${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain

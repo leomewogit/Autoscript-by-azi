@@ -2,8 +2,8 @@
 # Script  By CyberVPN
 # 2023 SLOWDNS
 # ===============================================
-
-
+mkdir /var/lib/ssnvpn-pro/
+wget /var/lib/ssnvpn-pro/ipvps.conf
 #setting IPtables
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
 iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300

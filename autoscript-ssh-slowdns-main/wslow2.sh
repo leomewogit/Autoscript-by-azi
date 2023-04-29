@@ -25,7 +25,7 @@ function LOGO() {
   clear
 	echo -e ""
 	echo -e "${BlueCyan} ————————————————————————————————————————${Suffix}"
-	echo -e "${ungu}             Potato Tunneling            "
+	echo -e "${ungu}              CyberVPN       "
 	echo -e "${BlueCyan} ————————————————————————————————————————${Suffix}"
 	echo -e ""
 }
@@ -35,7 +35,7 @@ sleep 1
 echo -e "" 
 echo -e "${BlueCyan} ————————————————————————————————————————${Suffix}"
 echo -e "${ungu}      Terimakasih sudah menggunakan-"
-echo -e "         Script Credit by Potato"
+echo -e "         Script premium CyberVPN"
 echo -e "${BlueCyan} ————————————————————————————————————————${Suffix}"
 echo -e ""
 exit 0

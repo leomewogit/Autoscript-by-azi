@@ -16,11 +16,11 @@ rm -rf /root/nsdomain
 rm nsdomain
 
 #input nameserver manual to cloudflare
-read -rp "Masukkan domain: " -e domain
+
 
 read -rp "Masukkan Subdomain: " -e sub
-SUB_DOMAIN=${sub}.${domain}
-NS_DOMAIN=slowdns-${SUB_DOMAIN}
+SUB_DOMAIN=${sub}
+NS_DOMAIN=${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
 
 nameserver=$(cat /root/nsdomain)
@@ -83,7 +83,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/etc/slowdns/sldns-client -udp 8.8.8.8:53 --pubkey-file /etc/slowdns/server.pub $nameserver 127.0.0.1:2222
+ExecStart=/etc/slowdns/sldns-client -udp 8.8.8.8:53 --pubkey-file /etc/slowdns/server.pub $nameserver 127.0.0.1:22
 Restart=on-failure
 
 [Install]
@@ -104,7 +104,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/etc/slowdns/sldns-server -udp :5300 -privkey-file /etc/slowdns/server.key $nameserver 127.0.0.1:2269
+ExecStart=/etc/slowdns/sldns-server -udp :5300 -privkey-file /etc/slowdns/server.key $nameserver 127.0.0.1:8080
 Restart=on-failure
 
 [Install]

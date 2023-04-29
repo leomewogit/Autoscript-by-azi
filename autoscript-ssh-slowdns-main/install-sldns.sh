@@ -5,7 +5,6 @@
 cd
 rm -rf slhostdns.sh
 #wget https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
-wget https://raw.githubusercontent.com/hidessh99/sulaimanl-Mnatap/main/cloudflare/slowdns-zone.sh && chmod +x slowdns-zone.sh && ./slowdns-zone.sh
 nameserver=$(cat /root/nsdomain)
 apt update -y
 apt install -y python3 python3-dnslib net-tools

@@ -78,7 +78,7 @@ echo "[12].limit speed vps"
 echo "[13].restart all service"
 echo "[14].WEBMIN"
 echo "[15].Cek semua port"
-echo "[16].Slowdns setting"
+echo "[16].bot menu"
 echo "[17].Menu Backup"
 echo "[18].CREATE SSH UDP"
 echo "[19].About"
@@ -167,7 +167,7 @@ fi
 if [ $bro = 16 ] || [ $bro = 16 ]
 then
 clear
-bash wslow2.sh
+echo -e "${red} coming soon!!!😂"
 fi
 if [ $bro = 17 ] || [ $bro = 17 ]
 then
